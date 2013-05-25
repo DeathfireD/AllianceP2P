@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xui>
+    <title value="Add Connection Wizard"/>
+    <body>
+        <wizard id="wizard" implementation="org.alliance.ui.addfriendwizard.AddFriendWizard" text="" image="gfx/wizardimage.jpg">
+
+            <step text="">
+                <mlabel html="yes">This will help you connect to your friends, coworkers or family members using Alliance.
+                    [p]
+                </mlabel>
+                <strut height="5"/>
+                <panel axis="x" border="0" expand="horiz">
+                    <strut width="10"/>
+                    <radiobutton eventid="radio1_1" group="a" text="I have a code I received from a friend"/>
+                    <filler/>
+                </panel>
+                <panel axis="x" border="0" expand="horiz">
+                    <strut width="10"/>
+                    <radiobutton eventid="radio1_2" id="b" group="a" text="I want to invite a friend to my Alliance network"/>
+                    <filler/>
+                </panel>
+                <panel axis="x" border="0" expand="horiz">
+                    <strut width="10"/>
+                    <radiobutton eventid="radio1_3" group="a" text="I want to connect to friends of my friends"/>
+                    <filler/>
+                </panel>
+                <strut height="5"/>
+            </step>
+
+            <step text="">
+                <mlabel html="yes">How would you like to invite friends to your network?
+                    [p]
+                </mlabel>
+                <panel axis="x" border="0" expand="horiz">
+                    <strut width="10"/>
+                    <radiobutton selected="yes" id="invite_msn" group="b" text="I want to invite friends from my list in MSN Messenger"/>
+                    <filler/>
+                </panel>
+                <panel axis="x" border="0" expand="horiz">
+                    <strut width="10"/>
+                    <radiobutton id="invite_email" group="b" text="I want to invite friends by entering their e-mail addresses"/>
+                    <filler/>
+                </panel>
+                <panel axis="x" border="0" expand="horiz">
+                    <strut width="10"/>
+                    <radiobutton id="invite_manual" group="b" text="I want to manually invite friends"/>
+                    <filler/>
+                </panel>
+                <strut height="5"/>
+            </step>
+
+            <step text="Enter connection code">
+                <mlabel html="yes">Enter the connection code you got from your friend: </mlabel>
+                <strut height="15"/>
+                <panel axis="x" border="0" expand="horiz">
+                    <label text="Connection code: "/>
+                    <textfield text="" id="codeinput" defaultfocus="true"/>
+                    <strut width="5"/>
+                </panel>
+                <strut height="15"/>
+                <mlabel html="yes">You can right click on the white area above and select paste to paste a code for the clipboard.
+                    [p]
+                    When you press next Alliance will attempt to connect using the code.
+                </mlabel>
+            </step>
+
+            <step text="Incorrect connection code">
+                <mlabel html="yes">The connection code seems to be corrupt.
+                    [p]
+                    Please press back and try entering the code again.
+                </mlabel>
+            </step>
+
+            <step text="Attempting to connect">
+                <mlabel html="yes">Attempting to connect using connection code...</mlabel>
+                <strut height="15"/>
+                <progressbar indeterminate="yes"/>
+                <strut height="15"/>
+                <mlabel html="yes">Please wait...</mlabel>
+            </step>
+
+            <step text="Connection failed!">
+                <mlabel html="yes">[b]Could not connect[/b]
+                    [p]
+                    Your friend has his Alliance turned off or his firewall is blocking the connection.
+                    [p]
+                    It is recommended that you create a connection code for your friend instead.
+                    [p]
+                    Press next to continue
+                </mlabel>
+
+                <!--                <strut height="5"/>
+                <panel axis="x" border="0" expand="horiz">
+                    <strut width="10"/>
+                    <radiobutton selected="true" eventid="radio2_1" group="a" text="Create a connection code for your friend (recommended)"/>
+                    <filler/>
+                </panel>
+                <panel axis="x" border="0" expand="horiz">
+                    <strut width="10"/>
+                    <radiobutton eventid="radio2_2" group="a" text="I've received a new connection code from my friend"/>
+                    <filler/>
+                </panel>-->
+            </step>
+
+            <step text="Connect to second degree connections">
+                <!--<mlabel html="yes">-->
+                <!--Oops! This is not yet implemented! =) But have no fear - do this instead:-->
+                <!--[p]-->
+                <!--0. Close this wizard.[br]-->
+                <!--1. Open Network Topology: View->Debug->Network Topology[br]-->
+                <!--2. Select a friend of a friend in the tree[br]-->
+                <!--3. Click on the toolbar button "Add Connection" (the small button just above the tree).[br]-->
+                <!--4. tada! You're done. Go back to step 2 if you want to connect to more people.[br]-->
+                <!--[p]-->
+                <!--gogogo!-->
+                <!--</mlabel>-->
+
+                <mlabel html="yes">
+                    Below is a list of new people found in your network:
+                    [p]
+                </mlabel>
+                <scrollpanel bordertype="lowered" height="200" id="scrollpanel">
+                </scrollpanel>
+                <panel border="5,5,0,0" axis="x">
+                    <filler expand="horiz"/>
+                    <button text="Select trusted" eventid="selecttrusted"/>
+                    <strut width="5"/>
+                    <button text="Select all" eventid="selectall"/>
+                    <strut width="5"/>
+                    <button text="Select none" eventid="selectnone"/>
+                </panel>
+                <mlabel html="yes">
+                    [p]
+                    Select the people you want to connect to and click next.
+                    [p]
+                </mlabel>
+            </step>
+
+            <step text="">
+                <mlabel html="yes">
+                    You have sent invitations to all selected connections!
+                    [p]
+                    Now you have to wait for your connections to accept your invitations.
+                    [p]
+                    Click Finish to complete the wizard.
+                </mlabel>
+            </step>
+
+            <step text="">
+                <mlabel html="yes">
+                    Could not connect!
+                    [p]
+                    The remote person has his Alliance turned off or his firewall is blocking the connection.
+                    [p]
+                    Will automatically try to reconnect later.
+                    [p]
+                    Click Finish to complete the wizard.
+                </mlabel>
+            </step>
+
+            <step text="Invite a friend">
+                <mlabel html="yes">
+                    Right click on the text below and select "Copy". Send the text to your friend by pasting it into an e-mail or a MSN message.
+                </mlabel>
+                <strut height="15"/>
+                <scrollpanel border="0" bordertype="lowered" minheight="150" height="150">
+                    <textarea id="code" border="5" text="Loading..."/>
+                </scrollpanel>
+                <strut height="15"/>
+                <mlabel html="yes" id="newcode">
+                    Each code is valid once so you need to [a href='']generate a new code[/a] for each friend you invite.
+                </mlabel>
+            </step>
+
+            <step text="Checking internet connection">
+                <mlabel html="yes">
+                    Please wait while your internet connection is beeing tested...
+                </mlabel>
+                <strut height="15"/>
+                <progressbar indeterminate="true"/>
+            </step>
+
+            <step text="Alliance port not open">
+                <mlabel html="yes" id="portclosed">
+                    It is not possible to connect to your Alliance application. The port that Alliance uses on your computer is blocked by an internet firewall or router.
+                    [p]
+                    [b]You can not invite anyone to your network unless you open this port.[/b] You can only receive invitations - your friends can invite you but you cannot invite friends.
+                    [p]
+                    The port that Alliance uses on your computer is [b]$PORT$[/b]. Go to [a href=http://www.portforward.com]http://www.portforward.com[/a] for more information on how to open this port.
+                    [p]
+                    If you only want to connect to friends that are in the same LAN as your are (for example a university, workplace or building) you can open the options, enable "LAN Support" and try again.
+                </mlabel>
+            </step>
+
+            <step text="Invite friends from MSN Messenger">
+                <mlabel html="yes">
+                    Drag friends from your MSN Messenger and drop them below:
+                </mlabel>
+                <strut height="15"/>
+                <scrollpanel height="150" bordertype="lowered">
+                    <textarea border="5" text="Drop MSN friends here"/>
+                </scrollpanel>
+                <strut height="15"/>
+                <mlabel id="text" html="yes">
+                    Press next to automatically invite the friends above into your Alliance network. The friends will be invited using e-mail.
+                </mlabel>
+            </step>
+
+            <step text="Invite friends by e-mail">
+                <mlabel html="yes">
+                    Enter the e-mail address of friends you want to invite below:
+                </mlabel>
+                <strut height="20"/>
+                <panel axis="x" border="0,0,0,6">
+                    <label text="E-mail for friend: "/>
+                    <textfield/>
+                </panel>
+                <panel axis="x" border="0,0,0,6">
+                    <label text="E-mail for friend: "/>
+                    <textfield/>
+                </panel>
+                <panel axis="x" border="0,0,0,6">
+                    <label text="E-mail for friend: "/>
+                    <textfield/>
+                </panel>
+                <panel axis="x" border="0,0,0,6">
+                    <label text="E-mail for friend: "/>
+                    <textfield/>
+                </panel>
+                <panel axis="x" border="0,0,0,6">
+                    <label text="E-mail for friend: "/>
+                    <textfield/>
+                </panel>
+                <strut height="20"/>
+                <mlabel id="text" html="yes">
+                    Press next to automatically invite the friends above into your Alliance network.
+                </mlabel>
+            </step>
+
+            <step text="Manual connection ok">
+                <mlabel html="yes">[b]Connection OK.[/b]</mlabel>
+            </step>
+            
+        </wizard>
+    </body>
+</xui>

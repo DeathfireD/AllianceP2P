@@ -1,0 +1,76 @@
+Alliance Active {
+    kind=Light
+    colorUltraLight=#95C1DB
+    colorExtraLight=#82B5D4
+    colorLight=#76A5C3
+    colorMid=#6C95B2
+    colorDark=#264F6F
+    colorUltraDark=#2F4B63
+    colorForeground=#000000
+}
+
+Alliance Disabled {
+    kind=Light
+    colorUltraLight=#FAFBFC
+    colorExtraLight=#F0F2F4
+    colorLight=#E1E4E7
+    colorMid=#D2D6DA
+    colorDark=#B4B9BE
+    colorUltraDark=#646A70
+    colorForeground=#787D82
+}
+
+Alliance Default {
+    kind=Light
+    colorUltraLight=#FFFFFF
+    colorExtraLight=#FEFEFE
+    colorLight=#C8D2DC
+    colorMid=#B4B9BE
+    colorDark=#50555A
+    colorUltraDark=#20252A
+    colorForeground=#000000
+}
+
+Alliance Header and Buttons {
+    kind=Dark
+    colorUltraLight=#7D828F
+    colorExtraLight=#555A64
+    colorLight=#293141
+    colorMid=#1F2737
+    colorDark=#1F2737
+    colorUltraDark=#1F2737
+    colorForeground=#FFFFFF
+}
+
+Alliance Header Rollover {
+    kind=Light
+    colorUltraLight=#95C1DB
+    colorExtraLight=#82B5D4
+    colorLight=#76A5C3
+    colorMid=#6C95B2
+    colorDark=#264F6F
+    colorUltraDark=#2F4B63
+    colorForeground=#FFFFFF
+}
+
+Alliance Buttons Rollover {
+    kind=Light
+    colorUltraLight=#FFFFD1
+    colorExtraLight=#F8F9A0
+    colorLight=#FFFF50
+    colorMid=#FCE237
+    colorDark=#6A1D00
+    colorUltraDark=#431300
+    colorForeground=#000000
+}
+
+Alliance Infonode MDI {
+    kind=Light
+    colorUltraLight=#FFFFFF
+    colorExtraLight=#FAFAFA
+    colorLight=#FAFAFA
+    colorMid=#FAFAFA
+    colorDark=#50555A
+    colorUltraDark=#20252A
+    colorForeground=#000000
+}

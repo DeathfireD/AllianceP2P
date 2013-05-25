@@ -1,0 +1,21 @@
+<xui>
+    <title value="Alliance Test Suite" image="res/gfx/icons/alliance.png"/>
+    <body>
+        <panel axis="x" >
+            <image src="testsuite/testsuite.jpg"/>
+            <strut width="5"/>
+            <panel axis="y" border="0">
+                <scrollpanel bordertype="lowered" id="sp">
+                </scrollpanel>
+                <panel axis="x" expand="horiz" border="5,5,0,0">
+                    <filler axis="x"/>
+                    <button text="Open UI" eventid="openui"/>
+                    <strut width="5"/>
+                    <button text="Start" eventid="start"/>
+                    <strut width="5"/>
+                    <button text="Stop" eventid="stop"/>
+                </panel>
+            </panel>
+        </panel>
+    </body>
+</xui>

@@ -1,0 +1,2 @@
+#summary User Guide - Portable version.
+A few people over at !PortableApps.com (http://portableapps.com/node/21882) have been requesting for a portable version of Alliance. I guess they didn't notice that Alliance's Betas are already portable. If you wish to run Alliance from a USB stick or an external HDD you can do so by simply moving the "portable" file into the Alliance folder and running the Alliance.exe (or jar file). From there all of Alliance's settings and downloads should be saved to the USB or external HDD.

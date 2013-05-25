@@ -1,0 +1,33 @@
+<xui>
+    <body>
+        <panel axis="x" border="4">
+            <panel axis="y" expand="vert">
+                <image src="res/gfx/icons/crash.png" id="image"/>
+                <filler/>
+            </panel>
+            <panel axis="y" border="6">
+                <scrollpanel scrollbars="vertoptional" width="300">
+                    <panel axis="x" border="0">
+                        <mlabel html="yes" id="fatal">%text%
+                        </mlabel>
+                        <mlabel html="yes" id="nonfatal">%text%
+                        </mlabel>
+                    </panel>
+                </scrollpanel>
+            </panel>
+            <panel axis="y" border="6" expand="vert">
+                <button text="%text%" expand="vert" width="110" eventid="view"/>
+                <strut height="6"/>
+                <button text="%text%" expand="vert" width="110" eventid="send"/>
+                <filler expand="vert"/>
+                <strut height="55"/>
+                <panel border="0" axis="x" expand="horiz">
+                    <filler/>
+                    <button text="%text%" eventid="quit"/>
+                    <strut width="5" id="close2"/>
+                    <button text="%text%" eventid="close"/>
+                </panel>
+            </panel>
+        </panel>
+    </body>
+</xui>

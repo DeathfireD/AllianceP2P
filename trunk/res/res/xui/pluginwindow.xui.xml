@@ -1,0 +1,32 @@
+<xui>
+    <body>
+        <panel axis="y" expand = "vert">
+            <panel id="header" axis="y" bordertype="etched" bordertitle="%text%">
+                <panel axis="x" expand="horiz">
+                    <mlabel id="addlabel" html="true">%text%
+                    </mlabel>
+                </panel>
+                <panel border="0,10,0,5" axis="x" expand="horiz">
+                    <label id="loaded" text="%text%"/>
+                    <filler/>
+                </panel>
+                <scrollpanel bordertype="lowered">
+                    <list height="50" id="pluginList"/>
+                </scrollpanel>
+                <panel border="150,5,0,0" axis="x" expand="horiz">
+                    <filler/>
+                    <button text="%text%" eventid="addplugin"/>
+                    <strut width="5"/>
+                    <button text="%text%" eventid="removeplugin"/>
+                </panel>
+                <strut height="25"/>
+                <panel border="0,5,0,0" axis="x" expand="horiz">
+                    <filler/>
+                    <button text="%text%" eventid="ok"/>
+                    <strut width="5"/>
+                    <button text ="%text%" eventid="cancel"/>
+                </panel>
+            </panel>
+        </panel>
+    </body>
+</xui>

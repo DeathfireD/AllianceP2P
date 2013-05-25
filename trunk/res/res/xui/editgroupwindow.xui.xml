@@ -1,0 +1,22 @@
+<xui>
+    <body>
+        <panel axis="y" expand="both">
+            <scrollpanel id="groups" width="320" height="400" scrollbars="optional" bordertype="etched" bordertitle="%text%">
+                <list id="groupList" expand="both"/>
+            </scrollpanel>
+             <filler/>
+            <mlabel id="unused" html="true">%text%
+            </mlabel>
+            <strut height="5"/>
+            <panel border="0,5,0,0" axis="x" expand="horiz">
+                <filler/>
+                <button text="%text%" eventid="addnew"/>
+                <strut width="5"/>
+                <button text="%text%" eventid="ok"/>
+                <strut width="5"/>
+                <button text="%text%" eventid="cancel"/>
+                <strut width="5"/>
+            </panel>
+        </panel>
+    </body>
+</xui>

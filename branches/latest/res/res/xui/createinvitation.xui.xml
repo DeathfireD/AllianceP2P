@@ -1,0 +1,24 @@
+
+<xui>
+    <title value="Invite ally" image="gfx/icons/alliance.png"/>
+    <body>
+        <panel border="10" axis="y" height="200" width="450">
+            <mlabel html="yes">One way of connecting to a new ally (friend or colleague for example) is to send him a connection code.
+                [p]
+                This connection code must be kept secret. Anyone that gets a hold of this code can connect to your Alliance!
+            </mlabel>
+            <strut height="15"/>
+            <panel axis="x" border="0" expand="horiz">
+                <label text="Connection code: "/>
+                <textfield text="" id="code"/>
+                <label text=" (Valid one week from now)"/>
+            </panel>
+            <strut height="15"/>
+            <mlabel html="yes">Once your colleague/friend receives this code he can enter it in Alliace. His Alliance program will then automatically connect to yours.</mlabel>
+            <panel axis="x" border="0" expand="horiz">
+                <filler axis="x"/>
+                <button text="Close" action="dispose"/>
+            </panel>
+        </panel>
+    </body>
+</xui>

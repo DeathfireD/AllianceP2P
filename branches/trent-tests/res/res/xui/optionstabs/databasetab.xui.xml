@@ -1,0 +1,82 @@
+<xui>
+    <body>
+        <panel axis="y" id="databasetab">
+            <scrollpanel border="0" scrollbars="optional">
+                <panel border="0" axis="y">
+                    <panel id="polite" axis="y" bordertype="etched" bordertitle="%text%">
+                        <form expand="horiz" border="5">
+                            <row>
+                                <cell>
+                                    <panel border="0" axis="y">
+                                        <filler/>
+                                        <label id="maxhash" text="%text%"/>
+                                    </panel>
+                                </cell>
+                                <cell>
+                                    <panel border="0" axis="x">
+                                        <filler axis="x"/>
+                                        <textfield width="50" minwidth="50" maxwidth="50" id="internal.hashspeedinmbpersecond"/>
+                                        <label text=" MiB/s"/>
+                                    </panel>
+                                </cell>
+                            </row>
+                            <row>
+                                <cell>
+                                    <panel border="0" axis="y">
+                                        <filler/>
+                                        <label id="pause" text="%text%"/>
+                                    </panel>
+                                </cell>
+                                <cell>
+                                    <panel border="0" axis="x">
+                                        <filler axis="x"/>
+                                        <textfield width="50" minwidth="50" maxwidth="50" id="internal.politehashingintervalingigabytes"/>
+                                        <label text=" GiB   "/>
+                                    </panel>
+                                </cell>
+                            </row>
+                            <row>
+                                <cell>
+                                    <panel border="0" axis="y">
+                                        <filler/>
+                                        <label id="wait" text="%text%"/>
+                                    </panel>
+                                </cell>
+                                <cell>
+                                    <panel border="0" axis="x">
+                                        <filler axis="x"/>
+                                        <textfield width="50" minwidth="50" maxwidth="50" id="internal.politehashingwaittimeinminutes"/>
+                                        <label text=" min   "/>
+                                    </panel>
+                                </cell>
+                            </row>
+                        </form>
+                        <strut height="10"/>
+                        <panel border="0" axis="x" expand="horiz">
+                            <checkbox id="internal.rescansharewhenalliancestarts" text="%text%"/>
+                            <filler/>
+                        </panel>
+                    </panel>
+                    <panel id="backup" axis="y" bordertype="etched" bordertitle="%text%">
+                        <form expand="horiz" border="5">
+                            <row>
+                                <cell>
+                                    <panel border="0" axis="y">
+                                        <filler/>
+                                        <label id="restore" text="%text%"/>
+                                    </panel>
+                                </cell>
+                                <cell>
+                                    <panel border="0" axis="x">
+                                        <filler axis="x"/>
+                                        <button eventid="browse" text="%text%"/>
+                                    </panel>
+                                </cell>
+                            </row>
+                        </form>
+                    </panel>
+                </panel>
+            </scrollpanel>
+        </panel>
+    </body>
+</xui>

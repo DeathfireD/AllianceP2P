@@ -1,0 +1,99 @@
+#summary Preview Release Changelog
+= AllianceP2P - Beta Wiki =
+
+== Latest Changes ==
+ * *1.2.0pre* - 2010-06-28
+    * Added: Site auto-update. (Bastvera, Kratos)
+    * Added: Major internal windows have their size and position saved between sessions. (Bastvera)
+    * Added: Stop state to 'refresh' button. Scan can be interrupted. (Bastvera)
+    * Added: External updater program to support admin elevation. (Bastvera, Kratos)
+    * Added: Friend List -> Expand/Collapse support for groups. (Bastvera)
+    * Added: Friend List -> Online/Total Counter in groups. (Bastvera)
+    * Added: Ability to translate Alliance trough external files. (Bastvera)
+    * Added: Default GUI color scheme can be changed trough external file. (Bastvera)
+    * Added: Share Window -> Shares adding through old method (Dialogs). (Bastvera)
+    * Added: Share Window -> Quick Jump. (Bastvera)
+    * Added: New Share Window. Shares management moved from old Options Window. (Bastvera)
+    * Added: Chat History -> Public/Private, Chat Filter (Text/Links). (Bastvera)
+    * Added: Options Window (DatabaseTab) -> Manual DB restore. (Bastvera)
+    * Added: Options Window (NetworkTab) -> Ability to bind Alliance to specific NIC. (Bastvera)
+    * Added: Options Window (GeneralTab) -> Global/Chat font can be changed. (Bastvera)
+    * Added: Share View -> Download to... (Selectable download directory). (Bastvera)
+    * Added: French translation. (totalffantasy)
+    * Added: Spanish translation. (phisys.digitalys)
+    * Added: French translation. (tim-international)
+    * Added: German translation. (A-Hoernchen)
+    * Changed: Any changes made to shares will trigger break and restart of scanning. (Bastvera)
+    * Changed: All windows should be adjusted to 'netbooks' resolution. (Bastvera)
+    * Changed: Splash uses double buffering, should reduce text flickering. (Bastvera)
+    * Changed: New Splash. (iPierre)
+    * Changed: New Tray/Window icons. (iPierre)
+    * Changed: Some performance improvements in scanning. (Bastvera)
+    * Changed: Autobackup/Restore uses H2 native feature. Autobackup moved to 'before scanning'. (Bastvera)
+    * Changed: Increased External IP check sites from 1 to 4, delayed refresh. (Bastvera)
+    * Changed: UPnP uses local IP from binded NIC. (Bastvera)
+    * Changed: Friend List -> Selected friends remains selected after list refresh. (Bastvera)
+    * Changed: Friend list -> Updates are less CPU intensive. (Bastvera)
+    * Changed: Search function -> More polite CPU usage for big DB (25k+ files). (Bastvera)
+    * Changed: Updated H2 library. (Bastvera)
+    * Changed: GUI from Synthetica to Substance. (Bastvera)
+    * Changed: Group management -> GUI for easier adding/removing of groups. (Bastvera)
+    * Changed: Updated JNotify library, support for 64bit. (Bastvera)
+    * Changed: New Options Window, dynamic loaded pages. (Bastvera)
+    * Changed: Fixes/Cleaning of internal Alliance library for better performance. (Bastvera)
+    * Fixed bug: IndexOutOfBounds in share view when friend removed share but we still have old view. (Bastvera)
+    * Fixed bug: Non existent download folder prevents downloading without warning. Alliance will use default folder. (Bastvera)
+    * Fixed bug: Not sorted download order. (Bastvera)
+    * Fixed bug: Sometimes DNS from friends were overwritten by IP. (Bastvera)
+    * Fixed bug: Search function -> Ignore case, 'All' shows all. (Bastvera)
+    * Fixed bug: Unable to start 'testsuite' on Windows (for devs). (Bastvera)
+    * Fixed bug: Right click for Non-Windows OSes. (Bastvera)
+    * Fixed bug: No more "ghost" friends on Friend List after removing. (Bastvera)
+    * Fixed bug: Sometimes Alliance has been started in incorrect 'current directory'. (Kratos, Bastvera)
+    * Fixed bug: Misspelling, minor bugs . (Bastvera)
+    * Removed: Old, unused libraries. (Bastvera)
+    * Removed: Old auto-update. (Bastvera)
+    * Removed: rDNS (temporary). (Bastvera)
+
+ * *1.1.0d* - 2010-02-15
+  * Changed: More polite DB shutdown.
+  * Added: DB auto-backup/restore.
+
+ * *1.1.0c* - 2010-02-08
+  * Changed: Share counters are now updated in real time.
+  * Changed: More polite share browsing with big amounts of share bases.
+  * Fixed bug: Added limit on how many files/directories we can browse in single directory to prevent BufferOverload.
+
+ * *1.1.0b*
+  * Fixed bug: Transfer does not end/Part of file corrupted for recently modified files.
+  * Fixed bug: NullPointerException for inaccessible shares paths.
+
+ * *v1.1.0a*
+  * *You need to rehash your files because this version uses new filedatabase*
+  * Fixed bug: DB bug -> The download doesn't end and shows corrupted file message.
+  * Changed: Tray icon size behaviour.
+  * Fixed bug: Support for Non-English characters doesn't work with Alliance theme.
+  * Removed: Alliance on windows will no longer automatically restart itself. (thanks Kratos)
+
+ * *v1.1.0*
+  * Bug fix: Auto detection of external IP in LAN mode. (thanks Kratos)
+  * Added: Portable mode to linux. (thanks Kratos)
+  * Changed: "Always automatically connect to new friends of friends" to "Always automatically connect to all friends of friends". (thanks Kratos)
+  * Added: Ability for plugins to insert a callback to the debug console. This allows plugins to add their own commands to the console. (thanks Kratos)
+  * Fixed bug: Removing files when scanning is in progress no longer break communication.
+  * Changed: View duplicates works again.
+  * Changed: Display of filesizes in ShareView moved to tooltip.
+  * Changed: DB memory usage reduced for big shares (100k files).
+  * Changed: Improved scanning of removed files.
+  * Changed: Improved database speed.
+  * Fixed bug: BufferOverload when using "send as link to chat" on folder with more than 512 files.
+  * Fixed bug: Several other minor bugs.
+
+ * *v1.0.9*
+  * *You need to rehash your files because this version uses new filedatabase*
+  * Added: Display of filesizes in ShareView.
+  * Changed: Database changed to H2.
+  * Fixed bug: BufferOverload when you add folder with more than 512 files at once to download que.
+  * Changed: Some UI elements.
+  * Added: Native OS theme.
+  * Fixed bug: Several other minor bugs.

@@ -1,0 +1,56 @@
+<xui>
+    <body>
+        <panel axis="y" id="securitytab">
+            <scrollpanel border="0" scrollbars="optional">
+                <panel border="0" axis="y">
+                    <panel id="expansion" axis="y" bordertype="etched" bordertitle="%text%">                      
+                        <panel axis="x" border="0" expand="horiz">
+                            <checkbox id="internal.disablenewuserpopup" text="%text%"/>
+                            <filler/>
+                        </panel>
+                        <panel id="auto" axis="y" bordertype="etched" bordertitle="%text%">
+                            <panel axis="x" border="0" expand="horiz">
+                                <checkbox id="internal.alwaysallowfriendstoconnect" text="%text%"/>
+                                <filler/>
+                            </panel>
+                            <panel axis="x" border="0" expand="horiz">
+                                <checkbox id="internal.alwaysallowfriendsoffriendstoconnecttome" text="%text%"/>
+                                <filler/>
+                            </panel>
+                            <panel axis="x" border="0" expand="horiz">
+                                <checkbox id="internal.automaticallydenyallinvitations" text="%text%"/>
+                                <filler/>
+                            </panel>
+                            <panel axis="x" border="0" expand="horiz">
+                                <checkbox id="internal.alwaysallowfriendsoftrustedfriendstoconnecttome" text="%text%"/>
+                                <filler/>
+                            </panel>
+                            <panel axis="x" border="0" expand="horiz">
+                                <checkbox id="internal.alwaysdenyuntrustedinvitations" text="%text%"/>
+                                <filler/>
+                            </panel>
+                            <panel axis="x" border="0" expand="horiz">
+                                <checkbox id="internal.alwaysautomaticallyconnecttoallfriendsoffriend" text="%text%"/>
+                                <filler/>
+                            </panel>
+                        </panel>
+                    </panel>
+                    <panel id="encryption" axis="y" bordertype="etched" bordertitle="%text%">
+                        <panel axis="x" expand="horiz" border="0">
+                            <label id="layer" text="%text%"/>
+                            <strut width="5"/>
+                            <dropdown id="internal.encryption">
+                                <option text="Basic (Weak encryption, Recommended)"/>
+                                <option text="SSL (Strong Encryption AES128bit, Experimental)"/>
+                            </dropdown>
+                            <filler/>
+                        </panel>
+                        <strut height="10"/>
+                        <mlabel id="cryptnote" html="true">%text%
+                        </mlabel>
+                    </panel>
+                </panel>
+            </scrollpanel>
+        </panel>
+    </body>
+</xui>

@@ -1,0 +1,18 @@
+<xui>
+    <body>
+        <panel axis="y">
+            <panel axis="x" border="3">
+                <mlabel id="describe" html="yes">%text%
+                </mlabel>
+            </panel>
+            <strut height="5"/>
+            <scrollpanel width="400" height="100" bordertype="lowered">
+                <textarea id="commentarea"/>
+            </scrollpanel>
+            <panel axis="x" border="0, 5, 0, 0" >
+                <filler/>
+                <button id="ok" text="%text%" action="dispose" width="75"/>             
+            </panel>
+        </panel>
+    </body>
+</xui>

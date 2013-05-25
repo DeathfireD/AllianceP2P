@@ -1,0 +1,517 @@
+<b>Changelog</b>
+<br><br>
+<p>
+    <b>1.1.0d</b> - 2010-02-15
+<dl>
+    <dd>+ Changed: More polite DB shutdown.
+    <dd>+ Added: DB auto-backup/restore.
+</dl>
+<p>
+    <b>1.1.0c</b> - 2010-02-08
+<dl>
+    <dd>+ Changed: Share counters are now updated in real time.
+    <dd>+ Changed: More polite share browsing with big amounts of share bases.
+    <dd>+ Fixed bug: Added limit on how many files/directories we can browse in single directory to prevent BufferOverload.
+</dl>
+<p>
+    <b>1.1.0b</b> - 2010-02-03
+<dl>
+    <dd>+ Fixed bug: Transfer does not end/Part of file corrupted for recently modified files.
+    <dd>+ Fixed bug: NullPointerException for inaccessible shares paths.
+</dl>
+<p>
+    <b>1.1.0a</b> - 2010-01-19
+<dl>
+    <dd>+ Fixed bug: DB bug -> The download doesn't end and shows corrupted file message.
+    <dd>+ Changed: Tray icon size behaviour.
+    <dd>+ Fixed bug: Support for Non-English characters doesn't work with Alliance theme.
+    <dd>+ Removed: Alliance on windows will no longer automatically restart itself. (thanks Kratos)
+</dl>
+<p>
+    <b>1.1.0</b> - 2010-01-11
+<dl>
+    <dd>+ Fixed bug: Auto detection of external IP in LAN mode. (thanks Kratos)
+    <dd>+ Added: Portable mode to linux. (thanks Kratos)
+    <dd>+ Changed: "Always automatically connect to new friends of friends" to "Always automatically connect to all friends of friends". (thanks Kratos)
+    <dd>+ Added: Ability for plugins to insert a callback to the debug console. This allows plugins to add their own commands to the console. (thanks Kratos)
+    <dd>+ Fixed bug: Removing files when scanning is in progress no longer break communication.
+    <dd>+ Changed: View duplicates works again.
+    <dd>+ Changed: Display of filesizes in ShareView moved to tooltip.
+    <dd>+ Changed: DB memory usage reduced for big shares (100k files).
+    <dd>+ Changed: Improved scanning of removed files.
+    <dd>+ Changed: Improved database speed.
+    <dd>+ Fixed bug: BufferOverload when using "send as link to chat" on folder with more than 512 files.
+    <dd>+ Fixed bug: Several other minor bugs.
+</dl>
+<p>
+    <b>1.0.9</b> - 2009-12-20
+<dl>
+    <dd>+ Added: Display of filesizes in ShareView.
+    <dd>+ Changed: Database changed to H2.
+    <dd>+ Fixed bug: BufferOverload when you add folder with more than 512 files at once to download que.
+    <dd>+ Changed: Some UI elements.
+    <dd>+ Added: Native OS theme.
+    <dd>+ Fixed bug: Several other minor bugs.
+</dl>
+<p>
+    <b>1.0.8a</b> - 2009-10-01
+<dl>
+    <dd>+ Removed: Old tray options.
+    <dd>+ Changed: UI Unloading behavior for Win.
+</dl>
+<p>
+    <b>1.0.8</b> - 2009-09-18
+<dl>
+    <dd>+ Changed: AutoUpgrade turned on between Betas.
+    <dd>+ Fixed bug: Rare DNS names reset to IP.
+    <dd>+ Changed: Alliance doesn't remove hashes for unplugged (external USB) drives in Windows.
+    <dd>+ Removed: JDic library.
+    <dd>+ Changed: Add group dialog window.
+    <dd>+ Added: External hash links.
+</dl>
+<p>
+    <b>1.0.7</b> - 2009-06-17
+<dl>
+    <dd>+ Added: Search friend. (thanks Bastvera)
+    <dd>+ Fixed bug: DNS names sometimes resets to IP. (thanks Bastvera)
+    <dd>+ Windows Vista Solution. (thanks Bastvera)
+    <dd>+ Added: Sound options tab. (thanks Bastvera)
+    <dd>+ Groups view on friend list changes. (thanks Bastvera)
+    <dd>+ Added: rDNS support. (thanks Kratos)
+    <dd>+ Added: Found via window. (thanks Bastvera)
+    <dd>+ Fixed bug: SSL should work again on most PCs. (thanks Bastvera)
+    <dd>+ Fixed bug: Update of own shared size on Friend List. (thanks Bastvera)
+    <dd>+ Fixed bug: Some ConcurrentModificationExceptions. (thanks Bastvera)
+    <dd>+ Added: <b>Friends of Trusted Friend</b> system. (thanks Bastvera)
+    <dd>+ Friend of Friends changes (removing of unwanted people should be much easier). (thanks Bastvera)
+    <dd>+ Opening of downloaded files and download folder on download tab. (thanks Bastvera)
+    <dd>+ Opening of own folders and files on My Share view. (thanks Bastvera)
+    <dd>+ Sound notification on private message. (thanks Bastvera)
+    <dd>+ New user message notification disable option. (thanks Bastvera)
+    <dd>+ DNS Support. (thanks Bastvera)
+    <dd>+ Fixed bug: send file to chat sometimes had wrong html format. (thanks Bastvera)
+    <dd>+ Selected friends don't lose focus when friends come online/offline. (thanks Bastvera)
+    <dd>+ Fixed bug: where people could download from you even though you didn't give them permission to. (thanks Bastvera)
+    <dd>+ Changed chat behavior ("HTML no longer allowed in chat" still was possible and could bring crashes). (thanks Bastvera)
+    <dd>+ Fixed bug: Edit -> Cancel crash when editing a firewall rule. (thanks Kratos)
+    <dd>+ RouteRule is serializable. (thanks Kratos)
+    <dd>+ Fixed bug: where Firewall traffic was denied when allow rule was present. (thanks Kratos)
+    <dd>+ Lots of changes to how plugins are loaded, including GUI support. (thanks Kratos)
+    <dd>+ Added Https:// and Ftp:// links support in chat. (thanks Bastvera)
+    <dd>+ Added 2 icons (with /clearlog and /clear functionality) to chat window. (thanks Bastvera)
+    <dd>+ Added /clearlog command. Clears the chat log file. (thanks Bastvera)
+    <dd>+ Added <b>groups (Networks)</b> feature. (thanks Bastvera)
+    <dd>+ Fixed bug: double folder adding. People can't add the same folder twice in Alliance's share list anymore. (thanks Bastvera)
+    <dd>+ Fixed bug: problem with autohash after adding new folders. (thanks Bastvera)
+    <dd>+ Fixed bug: counter of shared files. Alliance should show the correct number of files your sharing at the bottom right now. (thanks Bastvera)
+    <dd>+ Minor bug fixes and improvements. (thanks Bastvera)
+    <dd>+ Improved scalability of Alliance: uses even less memory when connected to many users
+    <dd>+ Move to top/bottom in download que (thanks bucketsort)
+    <dd>+ Better handling of Alliance settings folder in Linux - ends up in user home (thanks bucketsort)
+    <dd>+ Chat log history is more often saved  (thanks bucketsort)
+    <dd>+ Older chat messages are shown with time AND date (thanks bucketsort)
+</dl>
+<br>
+<p>
+    <b>1.0.6</b> - 2008-12-06
+<dl>
+    <dd>+ Improved search performance when receiving search hits from many (hundreds) of users
+    <dd>+ Improved performance of Alliance when part of a very large (1000+ friends) network
+    <dd>+ Joining as a new friend into a existing network works now much better
+    <dd>+ Improved speed of connecting to new friends
+    <dd>+ Change time from 100 days to 200 days for automatic offline friend removal
+    <dd>+ Direction of connection now shown in TCP/IP Connections debug window
+    <dd>+ Fixed bug: problem in packet routing algorithm
+    <dd>+ Fixed bug: files that are an exact multiple of one megabyte (1 048 576 bytes) now download correctly
+    <dd>+ Fixed bug: when settings-file is corrupt the backup settingsfile is now correctly used
+    <dd>+ Fixed bug: OutOfMemoryError: can not create native thread
+    <dd>+ Fixed bug: OutOfMemoryError: out of direct memory buffer space
+    <dd>+ Fixed bug: several ConcurrentModificationExceptions fixed
+    <dd>+ Fixed bug: a bug introduced in version 1.0.5 where when joining a large network problems occured if you are firewalled
+    <dd>+ Fixed bug: automatic hashing of files that are added/moved/deleted in shares now works again (thanks deathfired)
+</dl>
+<br>
+<p>
+    <b>1.0.5</b> - 2008-09-20
+<dl>
+    <dd>+ Fixed subfolder downloading: when a folder is downloaded with subfolders, the folder hierarchy is now preserved to the least common path (thanks Kratos)
+    <dd>+ Much better Linux support - added support for the Java 6 system tray - no more need for native libraries to run Alliance on Linux (thanks Kratos)
+    <dd>+ Alliance is now allowed to start if system tray is not supported (thanks Kratos)
+    <dd>+ Generally better management of the system tray on various operating systems
+    <dd>+ Alliance firewall: IP Rules (Access Control Lists) You are now able to setup ip address ranges to specifically allow or deny alliance to connect to, or accept connections from (thanks Kratos)
+    <dd>+ Added support for Plugins - will be useful for people that want to create bots for an Alliance network
+    <dd>+ Friends that have not been online for 100 days are automatically removed from friend list
+    <dd>+ Fixed wordarounds for top three most reported bugs (using the "send error" function)
+    <dd>+ Fixed bug: when writing to a file into a alliance shared directory alliance continually tries to hash the file (thanks Kratos)
+</dl>
+<br>
+<p>
+    <b>1.0.4</b> - 2008-06-05
+<dl>
+    <dd>+ Support for using Alliance over on a LAN - look for "LAN Support" under options. This disables the port check and uses your internal IP number
+    <dd>+ If the settings file is corrupt the backup version of the settings are automatically loaded
+    <dd>+ A user friendly message is shown when a user tries to run Alliance on Mac from a mounted image
+    <dd>+ Added a command in chat windows: "/clear". Clears the entire chat
+    <dd>+ Fixed bug: chat text field no longer looses focus when sending a message
+    <dd>+ Fixed bug: Automatic upgrade dialog is shown maaaany times
+    <dd>+ Fixed several crashes
+</dl>
+<br>
+<p>
+    <b>1.0.3</b> - 2008-05-14
+<dl>
+    <dd>+ Fixed bug: chat messages appear in incorrect order
+</dl>
+<br>
+<p>
+    <b>1.0.2</b> - 2008-05-13
+<dl>
+    <dd>+ When a new private chat message arrives the Alliance window is brought to front (if it is open) and the chat message tab is shown
+    <dd>+ Fixed bug: Alliance locks up and uses 100% CPU in networks with many friends
+</dl>
+<br>
+<p>
+    <b>1.0.1</b> - 2008-05-11
+<dl>
+    <dd>+ Possibility to autmatically hide the "You have successfully connected to ..." popups
+    <dd>+ Better support for OS X including real icon on dock, nicer UI and real installation package
+    <dd>+ Possibility to change the dns name for a friend. Right-click on the friend and select "Edit hostname" (thanks jpluebbert)
+    <dd>+ Fixed bug: chat messages should now be displayed in correct order
+    <dd>+ Fixed bug: nickname may no longer contain html
+    <dd>+ Fixed bug: Alliance does not crash when an inaccessable folder is shared
+    <dd>+ Fixed bug: several concurrent modification errors
+    <dd>+ Maybe fixed bug: Alliance locks up and uses 100% CPU
+</dl>
+<br>
+<p>
+    <b>1.0.0</b> - 2008-04-18
+<dl>
+    <dd>+ File system events implemented on Windows: when a file is added/moved/deleted the share is updated instantaneously
+    <dd>+ Before creating invitation codes Alliance makes sure your port is open and accessible from the Internet
+    <dd>+ When scanning the share: files that have been removed are actually removed from the shared files list (thanks pontusm)
+    <dd>+ Chat messages in public chat are now guaranteed to be displayed in correct order
+    <dd>+ Alliance is now easier to use: did some usability testing and updated certain UI details
+    <dd>+ Added new, fancy, speed diagram in main window
+    <dd>+ When looking at the share of a friend more stats are displayed (like total share size and upload speed)
+    <dd>+ The person that has invited the most people into the network is the "King" and gets a shiny star as his icon =)
+    <dd>+ Duplicate table shows filename first, then path to the file
+    <dd>+ Many improvements on the Mac version of Alliance
+    <dd>+ Added support for characters from East Asian languages - look in the advanced tab in options
+    <dd>+ Improved testsuite (for deleveopers)
+    <dd>+ When file database and search index are flushed to disk a message is displayed in the UI
+    <dd>+ Flushing of share database is made when user is away from the computer
+    <dd>+ When alliance is running in background mode it automatically restats every fourth hour by default
+    <dd>+ Added option to disable share scan when Alliance starts
+    <dd>+ Fixed the TOP TEN most occuring crashes! Used statistics from all error reports we've received
+    <dd>+ Fixed bug: Terrible memory leak when downloading many small files
+    <dd>+ Fixed bug: File where sometimes not moved from _incomplete_ folder
+    <dd>+ Fixed bug: HTML tags are no longer shown in system tray bubbles
+    <dd>+ Fixed bug: No longer possible to send empty messages in chat by just pressing enter
+    <dd>+ Fixed bug: Duplicate files list is more robust now
+    <dd>+ Fixed bug: Column names in duplicates tab where incorrect
+    <dd>+ Fixed bug: Files that are no longer on disk where sometimes still shown when viewing the share of a friend
+    <dd>+ Fixed bug: Private and public messages are correctly tagged in system tray bubbles
+    <dd>+ Fixed bug: Empty root folders are correctly displayed in view share
+    <dd>+ Fixed bug: NullPointerException when a friend is permanently removed
+    <dd>+ Fixed bug: When a user had Alliance running over remote desktop and minimized the remote desktop window the away-status was oscilating
+    <dd>+ Fixed bug: When a share is removed from the list of shared folders the files in that share are no longer shared
+    <dd>+ Fixed bug: Alliance window no longer maximaizes over start menu
+</dl>
+<br>
+<p>
+    <b>0.9.8</b> - 2007-03-02
+<dl>
+    <dd>+ Added ETA on every search result - approximates the time it would take you to download the file - if you choose to do so
+    <dd>+ Added popup menus in friend tab and download tab
+    <dd>+ Alliance now works on Java 6.0
+    <dd>+ Alliance no longer selects listening ports higher than 40000
+    <dd>+ Files that you already have are shown grayed-out in search results
+    <dd>+ Download grid in download tab has a smarter selection of what download to display
+    <dd>+ You can see yourself in the friend list
+    <dd>+ People that have been online for a very long time are not visible in the userlist of your friends
+    <dd>+ Fixed bug: When number of sources no longer shown as "1.0" when there's actually 10 sources
+    <dd>+ Fixed bug: Two similar folder names can now be shared
+</dl>
+<br>
+<p>
+    <b>0.9.7</b> - 2007-02-18
+<dl>
+    <dd>+ Added a small clock on friend icon when friend is away from the computer
+    <dd>+ Search hits are now compressed - this should make search result come back faster
+    <dd>+ Your own share is now viewable from the "view" menu
+    <dd>+ It's possible to send links to files in your share into the public chat - look in your share for this function
+    <dd>+ Duplicate files tab (also reached from view menu)
+    <dd>+ Current transfer speed is now shown in tray icon tooltip
+    <dd>+ Support for normal links to websites in chat
+    <dd>+ Discreete download and upload speed diagram in toolbar
+    <dd>+ Cut/Copy/Paste popup menus in places where you'd excpect them
+    <dd>+ Added a more detailed view of the selected download
+    <dd>+ Possibility to select what messages should show up as bubbles in system tray
+    <dd>+ Simplified search UI a bit
+    <dd>+ Changed color of star for "experienced" friends - it's green now
+    <dd>+ HTML no longer allowed in chat
+    <dd>+ Moved setting file, alliance hash database, alliance file index and other persistant state information to data/ folder - this folder is automatically created
+    <dd>+ Moved trace.log and error.log to logs/ folder - this folder is automatically created
+    <dd>+ Improved startup speed of entire application
+    <dd>+ Improved startup speed of splash window
+    <dd>+ Maybe fixed bug: all files turn up as duplicates
+</dl>
+<br>
+<p>
+    <b>0.9.6.2</b> - 2007-01-29
+<dl>
+    <dd>+ The folder structure of the download folder is now better organized.
+    <dd>+ Added possibility to rename nicknames of friends. It's a change that is local to your Alliance installation.
+    <dd>+ Improved usability in add friend wizard
+    <dd>+ It is now possible again to see files in "File Search" that you already have
+    <dd>+ Fixed bug: Alliance locks up using 100% (a gray window is visible when this happens)
+    <dd>+ Fixed bug: Very serious bug in network code - "IllegalArgumentException" occured when friend has a LOT of files in download que
+    <dd>+ Fixed bug: Download folder could get shared twice sometimes
+    <dd>+ Fixed bug: Friend connections stopped working sporadicaly
+    <dd>+ Fixed bug: Files that have a zero file size are not shared
+    <dd>+ Fixed bug: Several network connection problems
+    <dd>+ Fixed bug: "ConcurrentModificationError" when deleting downloads for que
+    <dd>+ Fixed several other minor bugs
+</dl>
+<br>
+<p>
+    <b>0.9.6</b> - 2007-01-14
+<dl>
+    <dd>+ Added public chat room
+    <dd>+ Added "reverse connects" when downloading - it is possible to download from firewalled users now
+    <dd>+ Forwarded invitations that fail because of a firewall are now forwarded the other way around to circumvent firewalls
+    <dd>+ Added support for links in chat windows. Links to alliance donwloads!
+    <dd>+ Added "Add files to share" button
+    <dd>+ Added possibility to forcefully reconnect to a friend. Good for debugging.
+    <dd>+ Simplified the main window UI a bit
+    <dd>+ Added possibility to listen on a specific IP address. Good for users with several network interfaces on their computer
+    <dd>+ Fixed bug: "offline for X" was inaccurate sometimes
+    <dd>+ Fixed bug: packet que overflow
+</dl>
+<br>
+<p>
+    <b>0.9.5</b> - 2007-01-09
+<dl>
+    <dd>+ Added support for two encryption types: "SSL", "Basic". Basic is a really weak encryption algorithm but it works well. SSL is uses very strong encryption but is experimental and buggy. Basic is the default encryption.
+    <dd>+ Changed network expansion default to facilitate faster network growth. Network security is slightly lower than the previous defaults.
+    <dd>+ Alliance is more polite when in background mode (=in system tray). Scans share slowly and hashes files slowly.
+    <dd>+ Chat messages and other stuff is now displayed in the tray icon
+    <dd>+ Added "Shutdown for X minutes" function in tray icon
+    <dd>+ Improved options window sliglty: added help texts, added browse button for download directory, added encryption type
+    <dd>+ Improved UI for chat messages
+    <dd>+ Simplified add connection wizard
+    <dd>+ Blocks that are downloaded and detected as corrupt are correctly downloaded again
+    <dd>+ Reduced memory usage when UI is not visible
+    <dd>+ Reduced core memory usage slightly
+    <dd>+ Fixed bug: SSL re-handshaking now works correctly
+    <dd>+ Fixed bug: NPE in download window
+    <dd>+ Fixed bug: Alliance sometimes crashed when moving files, on disk, out of share
+    <dd>+ Fixed packet overflow when there are lots of files in download que
+    <dd>+ Fixed various small bugs
+</dl>
+<br>
+<p>
+    <b>0.9.0</b> - 2006-08-29
+<dl>
+    <dd>+ <b>ENCRYPTION!</b> Alliance now adheres to the TSLv1.1 standard (SSL) - using Diffie-Hellman key exchange and AES 128bit encryption.
+    <dd>+ Delete multiple users, now works (mark more then one user, and press delete)
+    <dd>+ Connect to second degree connections list is now sorted by nickname (instead of id)
+    <dd>+ Expanded the Connect to second degree connections list some pixels.
+    <dd>+ Fixed bug: Same folder can not be shared twice
+    <dd>+ Share is not rescanned when choosing OK/Apply in Options window without having altered the share folders.
+</dl>
+<br>
+<p>
+    <b>0.8.30</b> - 2006-08-14
+<dl>
+    <dd>+ Possibility to view the share of a friend ('View Share' button in toolbar for 'My Network')
+    <dd>+ Friends connect much faster at startup
+    <dd>+ Users that have been offline for a long time have a special icon in the user list
+    <dd>+ If a friend was connected via another friend then his name is shown in user list
+    <dd>+ Automatically unfold folders in search result that only have one item in them
+    <dd>+ Fixed bug: Alliance window overlapping start menu when maximized
+</dl>
+<br>
+<p>
+    <b>0.8.26</b> - 2006-07-13
+<dl>
+    <dd>+ Improved UI when connecting to new friends and when forwarding connection invitations
+    <dd>+ Vast increase in speed and decrease in CPU usage when scanning shared files
+    <dd>+ Added "refresh share" button in lower right corner of main window.
+    <dd>+ Support for MacOS - have a look in the forum on source forge for help
+    <dd>+ All dialogs now open MUCH faster
+    <dd>+ New message text in invite emails
+    <dd>+ Added desktop shortcut to default download folder when installation on windows
+    <dd>+ Fixed small UI issue with list of friends of friends was displayed even if it was empty
+    <dd>+ Fixed a problem with the presentation file type
+    <dd>+ Fixed bug: share indexing did not work on certain new Java versions
+    <dd>+ Fixed bug: some messages where not getting through when user was offline (bug with persistant RPCs)
+    <dd>+ Fixed bug: symlinks in share on unix systems caused trouble
+    <dd>+ Fixed bug: file extension was not shown on unknown file types
+</dl>
+<br>
+<p>
+    <b>0.8.25.1</b> - 2006-04-28
+<dl>
+    <dd>+ Trying to fix a pesky bug where searches are not always returned correctly
+</dl>
+<br>
+<p>
+    <b>0.8.25</b> - 2006-04-26
+<dl>
+    <dd>+ Automatic port forwarding using UPnP
+    <dd>+ Function for automatically sending email to a friend when inviting
+    <dd>+ New search UI
+    <dd>+ Modified search algorithm. Parts of words now give results
+    <dd>+ It is now possible to send chat messages to users that are offline
+    <dd>+ "Last modified" file dates are correctly preserved when files are downloaded
+</dl>
+<br>
+<p>
+    <b>0.8.21</b> - 2006-04-20
+<dl>
+    <dd>+ Maybe fixed a serious bug where user information was flooded in the network. Added flood detection for this bug in case it's not fixed yet.
+    <dd>+ Sorting by file size in search tab now works again
+</dl>
+<br>
+<p>
+    <b>0.8.20</b> - 2006-04-19
+<dl>
+    <dd>+ Popup-menu in search tab
+    <dd>+ "Remove connection" function in "My Network"
+    <dd>+ Sligtly more polite user connecting - routers started to crash
+    <dd>+ Logic to prevent flooding of invitation forwards
+</dl>
+<br>
+<p>
+    <b>0.8.19</b> - 2006-04-19
+<dl>
+    <dd>+ Rewritten UI and flows for connecting and inviting friends. Uses a wizard now
+    <dd>+ Added security mesures to prevent brute-forcing of connection codes
+    <dd>+ When new version has been installed a question pops up - "Would you like to restart?" instead of a brute restart
+    <dd>+ Fixed problem with TCP/IP error showing in event log on XP SP2
+    <dd>+ Completely rewritten UI for list of friends (from now on called "Connection")
+    <dd>+ State of the core subsystem is now remembered between restarts
+    <dd>+ Stuff that needs user interaction (a invitation to connect for example) are remembered between restarts
+    <dd>+ A connection code is now valid a month(!)
+    <dd>+ Fixed random NullPointerException bug (problem with l'n'f)
+    <dd>+ Changed a bunch of icons
+    <dd>+ Does not show files in search result that you already have
+</dl>
+<br>
+<p>
+    <b>0.8.10</b> - 2006-03-26
+<dl>
+    <dd>+ Removed all advanced windows. They're reachable through the windows menu now.
+    <dd>+ Renamed "Invitation Code" to "Connection code". Changed terminology in this process. You now have a "connection" to a user. The term "ally" is no longer used.
+    <dd>+ More intelligent download selection. Avoids starting two downloads from the same person - prefers running two downloads from different users simulaniously
+    <dd>+ Move up/down downloads in download queue
+    <dd>+ Filename always visible in download queue
+    <dd>+ Fixed bug where splashwindow would not dissapear and lock UI
+    <dd>+ Change number formating
+    <dd>+ Improved search UI
+    <dd>+ A bunch of minor fixes
+</dl>
+<br>
+<p>
+    <b>0.8.8</b> - 2006-03-21
+<dl>
+    <dd>+ Renamed to Alliance
+    <dd>+ Invitations - Use a invitation code to invite a friend to be your ally
+    <dd>+ Forwarded invitations - use an ally to forward an invitation to one of his allies
+    <dd>+ Created installer for Windows
+    <dd>+ More polite friend connecting - Windows XP SP2 limit will not be reached now
+    <dd>+ Polite hashing tweaked: hash no more than 10Mb/s. Hash 50Gb and then wait 30 minutes.
+    <dd>+ Options dialog! Check it out. Automatically opened first time Alliance is run.
+    <dd>+ Trace tab is not shown by default.
+    <dd>+ Messages are now rememered when ui is not running and displayed when you oppen the ui.
+</dl>
+<br>
+<p>
+    <b>0.8.5</b> -  2006-03-14
+<dl>
+    <dd>+ Upload throttling! Set the throttle value under Tools->Options. It is <b>higly recommended</b> for ADSL users with 1mbit upstream to set their upload throttle to 70 (kb/s).
+    <dd>+ "Look for new files" function - the links above. Try it!
+    <dd>+ Duplicate files detected in share. Try command "dups" in console. Keeps Alliance from using 100% cpu when starting up and there are a lot of duplicate files.
+    <dd>+ The "days ago" column in search now uses the time the file was last modified (as opposed to when it was hashed).
+    <dd>+ File that are modified while beeing hashed are detected. Files modified after hashing are also detected.
+    <dd>+ File types. It's now possible to search per file type
+</dl>
+<br>
+<p>
+    <b>0.8.1</b> - 2006-02-22
+<dl>
+    <dd>+ Minor bugfixes
+</dl>
+<br>
+<p>
+    <b>0.8.0</b> - 2006-02-18
+<dl>
+    <dd>+ New column in search. Displays number of days ago a file was indexed.
+    <dd>+ Fixed problem: large files (>2Gb) would grind system to a halt at beginning of download. This was because it takes a lot of time to allocate a 2Gb file on disk. Blocks that are close or below the actual file size on disk are now preferred.
+    <dd>+ Imporved error handling (again). Now errors should never lock threads.
+    <dd>+ Even more polite hashing. Really don't want this to be a problem. Hashes 50Gb and waits 30 minutes (and repeats).
+</dl>
+<br>
+<p>
+    <b>0.7.7</b> - 2006-02-14
+<dl>
+    <dd>+ Program can not be started twice. Splash screen is shown when starting first time.
+    <dd>+ Folder column in search result. Tooltip on every result.
+    <dd>+ File scanning (=looking for new files to hash) is more polite now.. No longer consumes 100% on linux.
+    <dd>+ File downloads of files larger than 2Gb now work.
+</dl>
+<br>
+<p>
+    <b>0.7.5</b> - 2006-02-13
+<dl>
+    <dd>+ Upload tab
+    <dd>+ Fixed bug (maybe): BufferUnderflowException when connecting to friend.
+    <dd>+ Search index takes file date into concideration. Newers files are returned first. Searching for very broad keyword (avi for example) does not degrade performance. This paves the way for some interesting features.
+    <dd>+ Polite hashing. After each 200Gb of hashed data the system waits for two hours (configurable). Disks where getting overheated..
+</dl>
+<br>
+<p>
+    <b>0.7.0</b> - 2006-02-12
+<dl>
+    <dd>+ Improved download reliability significantly
+    <dd>+ Download queue is remembered between restarts.
+    <dd>+ Swarming downloads now work. Badly need bandwidth throttling now - swarms depend on it.
+    <dd>+ When a friend goes online he's checked for blocks of files you're downloading.
+    <dd>+ Its now possible to see what files you upload (under connections).
+    <dd>+ Downloads are now aborted in a more graceful way.
+    <dd>+ Fixed bug: "Tiger hash for block X is incorrect on disk".
+    <dd>+ Share size in neighberhood is updated when user goes offline.
+    <dd>+ Setting-values with default values are not saved in the settings file. This is good. I can change default settings for you with a new update.
+    <dd>+ Download connections can hande IO errors now
+    <dd>+ Added user names in search hits
+</dl>
+<br>
+<p>
+    <b>0.6.0</b> - 2006-02-10
+<dl>
+    <dd>+ Improved friend tree ui
+    <dd>+ Limit on number of hits is no longer fixed but is based on maximum packet size - right now 15kb.
+    <dd>+ Total share size in your neighborhood! yay!
+    <dd>+ ETA on downloads. Rolling averages for bandwidth mesuring.
+    <dd>+ More precise % complete per download. Updated once every second.
+    <dd>+ Added logging and improved error handling. Now there's error.log and trace.log. Trace is shown in a tab in the UI. <b>Skicka g�rna med error.log och trace.log n�r ni hittar n�got l�bbigt fel.</b>. IO errors are only logged - not shown to user.
+    <dd>+ Added a comprehendable message when remote most probably does not have you as friend
+    <dd>+ Error messages are now shown as balloons when UI has not been initiated. Error dialogs do not block COMM thread.
+</dl>
+<br>
+<p>
+    <b>0.5.5</b> - 2006-02-09
+<dl>
+    <dd>+ Fixed serious problem where a download would not finish if we're uploading the same file at the same time.
+    <dd>+ Incomplete files in downloads are no longer fragmented - thay are saved sequentially to disk. This saves a lot of time when the download is comlete and is moved out from the blockstorage. Files in cache are still fragmented. This saves disk space when having partial files in cache.
+    <dd>+ Fixed bug where downloads where not starting
+    <dd>+ Double click on tray icon
+    <dd>+ This window
+</dl>
+<br>
+<p>
+    <b>0.5.0</b> - 2006-02-07
+<dl>
+    <dd>+ First release ever!
+</dl>

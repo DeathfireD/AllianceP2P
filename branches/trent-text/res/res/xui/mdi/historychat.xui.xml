@@ -1,0 +1,36 @@
+<xui>
+    <body>
+        <panel opaque="false" border="0" axis="x" expand="horiz" height="24">
+            <toolbar opaque="false" id="toolbar" expand="horiz"/>
+        </panel>
+        <panel axis="y" border="0">
+            <scrollpanel expand="both" scrollbars="optional" id="scrollpanel" bordertype="lowered">
+                <textarea id="textarea"/>
+            </scrollpanel>
+        </panel>
+        <panel id="themed" axis="x" expand="horiz">
+            <panel opaque="false" border="0,0,0,0" axis="y" expand="horiz">
+                <panel axis="x" border="0">
+                    <label id="typelabel" text="%text%"/>
+                    <strut width="5"/>
+                    <dropdown id="type"/>
+                    <filler expand="horiz"/>
+                    <strut width="5"/>
+                    <checkbox text="%text%" eventid="links"/>
+                </panel>
+                <strut height="5"/>
+                <panel axis="x" border="0">
+                    <label id="filterlabel" text="%text%"/>
+                    <strut width="5"/>
+                    <textfield opaque="true" eventid="chat"/>
+                    <strut width="5"/>
+                    <button eventid="filter" text="%text%"/>
+                </panel>
+            </panel>
+        </panel>
+        <panel axis="x" opaque="false" border="8,6,0,1" expand="horiz">
+            <label id="status" text=" "/>
+            <filler expand="horiz"/>
+        </panel>
+    </body>
+</xui>

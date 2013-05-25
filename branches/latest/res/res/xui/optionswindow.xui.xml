@@ -1,0 +1,434 @@
+
+<xui>
+    <title value="Options" image="gfx/icons/alliance.png"/>
+    <body>
+        <tabbedpanel height="600" id="tab">
+            <tab text="General" tooltip="General options">
+                <panel axis="y" bordertype="etched" bordertitle="Personal information">
+                    <form expand="horiz" border="5">
+                        <row>
+                            <cell>
+                                <panel border="0" axis="y">
+                                    <filler/>
+                                    <label text="Your nickname: "/>
+                                </panel>
+                            </cell>
+                            <cell>
+                                <panel border="0" axis="x">
+                                    <filler axis="x"/>
+                                    <textfield width="250" minwidth="250" maxwidth="250" id="my.nickname"/>
+                                </panel>
+                            </cell>
+                        </row>
+                    </form>
+
+                    <panel axis="x">
+                        <mlabel html="true">
+                            Note that your nickname can be seen by second degree friends in the network.
+                        </mlabel>
+                    </panel>
+                </panel>
+
+                <panel axis="y" bordertype="etched" bordertitle="GUI Skin Theme">
+                    <form expand="horiz" border="5">
+                        <row>
+                            <cell>
+                                <panel border="0" axis="y">
+                                    <filler/>
+                                    <label text="Choose Skin Theme: "/>
+                                </panel>
+                            </cell>
+                            <cell>
+                                <panel border="0" axis="x">
+                                    <filler axis="x"/>
+                                    <dropdown width="250" minwidth="250" maxwidth="250" id="internal.guiskin">
+                                        <option text="Alliance"/>
+                                        <option text="OS Native"/>                                      
+                                    </dropdown>
+                                </panel>
+                            </cell>
+                        </row>
+                    </form>
+
+                    <panel axis="x">
+                        <mlabel html="true">
+                            Some skins need more computer resources than others. Restart needed.
+                        </mlabel>
+                    </panel>
+                </panel>
+
+                <panel axis="y" bordertype="etched" bordertitle="LAN Support">
+                    <panel axis="x" expand="horiz">
+                        <checkbox id="server.lansupport" text="I want to use Alliance on my LAN and not over the Internet"/>
+                        <filler/>
+                    </panel>
+                    <panel axis="x">
+                        <mlabel html="true">
+                            Select this if you [b]only[/b] want to connect to friends in the same local area you are in (for example the same university, workplace or building).
+                        </mlabel>
+                    </panel>
+                </panel>
+
+                <panel axis="y" bordertype="etched" bordertitle="Downloads">
+                    <form expand="horiz" border="5">
+                        <row>
+                            <cell>
+                                <panel border="0" axis="y">
+                                    <filler/>
+                                    <label text="Download folder: "/>
+                                </panel>
+                            </cell>
+                            <cell>
+                                <panel border="0" axis="x">
+                                    <filler axis="x"/>
+                                    <textfield id="internal.downloadfolder"/>
+                                    <strut width="5"/>
+                                    <button eventid="browse" text="Browse..."/>
+                                </panel>
+                            </cell>
+                        </row>
+                    </form>
+                    <panel axis="x">
+                        <mlabel html="true">
+                            Files that you download using Alliance will be saved in this folder.
+                        </mlabel>
+                    </panel>
+                </panel>
+
+                <panel axis="y" bordertype="etched" bordertitle="Server information">
+                    <form expand="horiz" border="5">
+                        <row>
+                            <cell>
+                                <panel border="0" axis="y">
+                                    <filler/>
+                                    <label text="Port (you can not change this): "/>
+                                </panel>
+                            </cell>
+                            <cell>
+                                <panel border="0" axis="x">
+                                    <filler axis="x"/>
+                                    <textfield width="45" minwidth="45" maxwidth="45" id="server.port"/>
+                                </panel>
+                            </cell>
+                        </row>
+                    </form>
+                    <panel axis="x">
+                        <mlabel html="true" id="portforward">Make sure this port is [b]forwarded in your router[/b] - otherwise downloads and invitations will not work! Go to [a href='.']http://www.portforward.com/[/a] for more information on how to forward a port.</mlabel>
+                    </panel>
+                </panel>
+                <filler/>
+            </tab>
+
+            <tab text="Share" tooltip="Add or remove directories to share">
+                <panel axis="y" bordertype="etched" bordertitle="Shared folders:">
+                    <panel border="0,0,0,5" axis="x" expand="horiz">
+                        <label text="Select what folders you want to share with your friends: "/>
+                        <filler/>
+                    </panel>
+
+                    <scrollpanel bordertype="lowered">
+                        <list id="shareList"/>
+                    </scrollpanel>
+                    <panel border="0,5,0,0" axis="x" expand="horiz">
+                        <filler/>
+                        <button text="Edit group name" eventid="editgroupname"/>
+                        <strut width="5"/>
+                        <button text="Add..." eventid="addfolder"/>
+                        <strut width="5"/>
+                        <button text="Remove" eventid="removefolder"/>
+                    </panel>
+                    <strut height="25"/>
+                </panel>
+            </tab>
+
+            <tab text="Sound">
+                <panel axis="y" bordertype="etched" bordertitle="Sound notification">
+                    <form expand="horiz" border="5">
+                        <row>
+                            <cell>
+                                <panel border="0" axis="y">
+                                    <filler/>
+                                    <label text="Private message:"/>
+                                </panel>
+                            </cell>
+                            <cell>
+                                <panel border="0" axis="x">
+                                    <filler axis="x"/>
+                                    <textfield width="225" minwidth="225" maxwidth="225" id="internal.pmsound"/>
+                                    <strut width="5"/>
+                                    <button width="85" eventid="browsesoundpm" text="Browse..."/>
+                                </panel>
+                            </cell>
+                        </row>
+                    </form>
+                    <form expand="horiz" border="5">
+                        <row>
+                            <cell>
+                                <panel border="0" axis="y">
+                                    <filler/>
+                                    <label text="Public message:"/>
+                                </panel>
+                            </cell>
+                            <cell>
+                                <panel border="0" axis="x">
+                                    <filler axis="x"/>
+                                    <textfield width="225" minwidth="225" maxwidth="225" id="internal.publicsound"/>
+                                    <strut width="5"/>
+                                    <button width="85" eventid="browsesoundpublic" text="Browse..."/>
+                                </panel>
+                            </cell>
+                        </row>
+                    </form>
+                    <form expand="horiz" border="5">
+                        <row>
+                            <cell>
+                                <panel border="0" axis="y">
+                                    <filler/>
+                                    <label text="Download complete:"/>
+                                </panel>
+                            </cell>
+                            <cell>
+                                <panel border="0" axis="x">
+                                    <filler axis="x"/>
+                                    <textfield width="225" minwidth="225" maxwidth="225" id="internal.downloadsound"/>
+                                    <strut width="5"/>
+                                    <button width="85" eventid="browsesounddownload" text="Browse..."/>
+                                </panel>
+                            </cell>
+                        </row>
+                    </form>
+                    <strut height="10"/>
+                    <mlabel html="true">
+                        [b]Leave blank if you want to mute individual sounds.[/b]
+                    </mlabel>
+                    <panel border="5" axis="x" expand="horiz">
+                        <filler axis="x"/>
+                        <button width="85" eventid="soundmute" text="Mute"/>
+                        <strut width="5"/>
+                        <button width="85" eventid="sounddefault" text="Default"/>
+                    </panel>
+                </panel>
+
+            </tab>
+
+            <tab text="Security &amp; System tray" tooltip="Encryption and network expansion details">
+                <panel axis="y" bordertype="etched" bordertitle="Network expansion defaults">
+                    <panel axis="x" border="0" expand="horiz">
+                        <checkbox id="internal.invitationmayonlybeusedonce" text="Connection codes I create may only be used once"/>
+                        <filler/>
+                    </panel>
+                    <panel axis="x" border="0" expand="horiz">
+                        <checkbox id="internal.disablenewuserpopup" text="Disable new user message notification"/>
+                        <filler/>
+                    </panel>
+                    <panel axis="y" bordertype="etched" bordertitle="Network automatization defaults">
+                        <panel axis="x" border="0" expand="horiz">
+                            <checkbox id="internal.alwaysallowfriendstoconnect" text="Always allow my friends to connect to each other"/>
+                            <filler/>
+                        </panel>
+                        <panel axis="x" border="0" expand="horiz">
+                            <checkbox id="internal.alwaysallowfriendsoffriendstoconnecttome" text="Always allow friends of all my friends to connect to me"/>
+                            <filler/>
+                        </panel>
+                        <panel axis="x" border="0" expand="horiz">
+                            <checkbox id="internal.automaticallydenyallinvitations" text="Always deny popup invitations from friends of all my friends"/>
+                            <filler/>
+                        </panel>
+                        <panel axis="x" border="0" expand="horiz">
+                            <checkbox id="internal.alwaysallowfriendsoftrustedfriendstoconnecttome" text="Always allow friends of my trusted friends to connect to me"/>
+                            <filler/>
+                        </panel>
+                        <panel axis="x" border="0" expand="horiz">
+                            <checkbox id="internal.alwaysdenyuntrustedinvitations" text="Always deny popup invitations from friends of my untrusted friends"/>
+                            <filler/>
+                        </panel>
+                        <panel axis="x" border="0" expand="horiz">
+                            <checkbox id="internal.alwaysautomaticallyconnecttoallfriendsoffriend" text="When a friend connects to me automatically connect to all his friends"/>
+                            <filler/>
+                        </panel>
+                    </panel>
+                </panel>
+                <panel axis="y" bordertype="etched" bordertitle="Encryption">
+                    <panel axis="x" expand="horiz" border="0">
+                        <label text="Encryption layer: "/>
+                        <dropdown id="internal.encryption">
+                            <option text="Basic (Weak encryption, Recommended)"/>
+                            <option text="SSL (Strong Encryption AES128bit, Experimental)"/>
+                        </dropdown>
+                        <filler/>
+                    </panel>
+                    <strut height="10"/>
+                    <mlabel html="true">
+                        [b]ALL your friends must change encryption layer and restart Alliance at the same time for a switch of encryption to work.[/b]
+                    </mlabel>
+                </panel>
+                <panel axis="y" bordertype="etched" bordertitle="System tray notification">
+                    <panel axis="x" expand="horiz">
+                        <label text="Show bubble in system tray when:"/>
+                        <filler/>
+                    </panel>
+                    <panel border="0" axis="x" expand="horiz">
+                        <strut width="15"/>
+                        <checkbox id="internal.showpublicchatmessagesintray" text="Public chat message is received"/>
+                        <filler/>
+                    </panel>
+                    <panel border="0" axis="x" expand="horiz">
+                        <strut width="15"/>
+                        <checkbox id="internal.showprivatechatmessagesintray" text="Private chat messages is received"/>
+                        <filler/>
+                    </panel>
+                    <panel border="0" axis="x" expand="horiz">
+                        <strut width="15"/>
+                        <checkbox id="internal.showsystemmessagesintray" text="Alliance needs my attention"/>
+                        <filler/>
+                        <filler/>
+                    </panel>
+                </panel>
+
+                <filler/>
+            </tab>
+
+            <tab text="Firewall">
+                <panel axis="y" bordertype="etched" bordertitle="Alliance firewall">
+                    <panel axis="x" expand="horiz">
+                        <mlabel html="true">
+                            The Alliance firewall is an advanced feature. It is used to select what ip address ranges
+                            Alliance is allowed to communicate with.
+                            [p]
+                            Note that if no rule is applicable, the default behavior is to deny. The list uses a first
+                            applicable rule so if you have Allow 192.168.0.0/16 then Deny 192.168.2.0/24, traffic to
+                            192.168.2.* will still be allowed through.
+                        </mlabel>
+                    </panel>
+                    <panel axis="x" border="1,7,1,1" expand="horiz">
+                        <checkbox id="internal.enableiprules" text="Enable Alliance firewall with following rules:"/>
+                        <filler/>
+                    </panel>
+                    <panel axis="x" border="5,0,5,5">
+                        <scrollpanel bordertype="lowered">
+                            <list id="ruleList"/>
+                        </scrollpanel>
+                    </panel>
+                    <panel border="5,5,5,0" axis="x" expand="horiz">
+                        <filler/>
+                        <button text="" tooltip="Add new rule" image="gfx/icons/add.png" type="flat" eventid="addrule"/>
+                        <strut width="5"/>
+                        <button text="" tooltip="Remove selected rule" image="gfx/icons/remove.png" type="flat" eventid="removerule"/>
+                        <strut width="5"/>
+                        <button text="" tooltip="Move selected rule up" image="gfx/icons/up.png" type="flat" eventid="moveruleup"/>
+                        <strut width="5"/>
+                        <button text="" tooltip="More selected rule down" image="gfx/icons/down.png" type="flat" eventid="moveruledown"/>
+                        <strut width="5"/>
+                        <button text="" tooltip="Edit selected rule" image="gfx/icons/edit.png" type="flat" eventid="editrule"/>
+                    </panel>
+                    <strut height="5"/>
+                </panel>
+            </tab>
+
+            <tab text="Advanced" tooltip="Advanced options for advanced users">
+                <panel axis="y" bordertype="etched" bordertitle="Uploads">
+                    <form expand="horiz" border="5">
+                        <row>
+                            <cell>
+                                <label text="Max upload speed (zero for unlimited): "/>
+                            </cell>
+                            <cell>
+                                <panel border="0" axis="x">
+                                    <filler axis="x"/>
+                                    <textfield width="35" minwidth="35" maxwidth="35" id="internal.uploadthrottle"/>
+                                    <label text=" KiB/s"/>
+                                </panel>
+                            </cell>
+                        </row>
+                    </form>
+                    <panel axis="x">
+                        <mlabel expand="horiz" html="true">A limit of 75KiB/s is recommended for a normal (1Mbit upstream) connection.</mlabel>
+                    </panel>
+                </panel>
+
+                <panel axis="y" bordertype="etched" bordertitle="File indexing">
+                    <form expand="horiz" border="5">
+                        <row>
+                            <cell>
+                                <label text="Max hash speed (zero for unlimited): "/>
+                            </cell>
+                            <cell>
+                                <panel border="0" axis="x">
+                                    <filler axis="x"/>
+                                    <textfield width="35" minwidth="35" maxwidth="35" id="internal.hashspeedinmbpersecond"/>
+                                    <label text=" MiB/s"/>
+                                </panel>
+                            </cell>
+                        </row>
+                    </form>
+                    <panel border="5" axis="x" expand="horiz">
+                        <label text="Wait "/>
+                        <textfield width="35" minwidth="35" maxwidth="35" id="internal.politehashingwaittimeinminutes"/>
+                        <label text=" minutes after "/>
+                        <textfield width="35" minwidth="35" maxwidth="35" id="internal.politehashingintervalingigabytes"/>
+                        <label text=" GiB have been hashed."/>
+                        <filler expand="horiz"/>
+                    </panel>
+                    <strut height="10"/>
+                    <panel border="0" axis="x" expand="horiz">
+                        <checkbox id="internal.rescansharewhenalliancestarts" text="Scan share when Alliance starts (recommended)"/>
+                        <filler/>
+                    </panel>
+                </panel>
+
+                <panel axis="y" bordertype="etched" bordertitle="Server - Experimental settings">
+                    <!-- <panel axis="x" expand="horiz" border="0">
+                        <label text="IP number to listen on: "/>
+                        <textfield width="100" minwidth="100" maxwidth="100" id="internal.serverlistenip"/>
+                        <filler/>
+                    </panel>
+                    <label text=""/>
+                    <panel axis="x" expand="horiz" border="0">
+                        <label text="(Leave it blank if you don't know what it is)"/>
+                        <filler/>
+                    </panel>
+                    <label text=""/>-->
+                    <panel axis="x" expand="horiz" border="0">
+                        <label text="Your DNS address: "/>
+                        <textfield width="250" minwidth="250" maxwidth="250" id="server.dnsname"/>
+                        <label text=""/>
+                        <filler/>
+                    </panel>
+                    <label text=""/>
+                    <mlabel html="true">Here you can input your DNS address if you own one or use DDNS provider.
+                        [b]Be sure that you provided correct address[/b] before your start connecting to new friends.[br]
+                        [i]Leave blank to use your IP number.[/i]
+                    </mlabel>
+                    <panel border="0" axis="x" expand="horiz">
+                        <checkbox id="internal.rdnsname" text="Enable rDNS support. (Don't change if you don't know what it is) " tooltip="Will autodetect your DNS. Due to converting will hang Alliance for couple of seconds. Restart recommended."/>
+                        <filler/>
+                    </panel>
+                </panel>
+
+                <panel axis="y" bordertype="etched" bordertitle="Support for East Asian characters">
+                    <panel border="0" axis="x" expand="horiz">
+                        <checkbox id="internal.enablesupportfornonenglishcharacters" text="Enable support for non-english characters (requires restart)"/>
+                        <filler/>
+                    </panel>
+                </panel>
+                <!--<panel axis="y" bordertype="etched" bordertitle="Alliance datafiles storing place (Windows ONLY)">
+                    <panel border="0" axis="x" expand="horiz">
+                        <button width="200" eventid="standalonecopy" text="Use Alliance Folder"/>
+                        <strut width="5"/>
+                        <button width="200" eventid="standalonedelete" text="Use UserProfile Folder"/>
+                        <filler/>
+                    </panel>
+                </panel>-->
+
+            </tab>
+        </tabbedpanel>
+        <panel border="5" axis="x" expand="horiz">
+            <filler axis="x"/>
+            <button width="85" eventid="ok" text="OK"/>
+            <strut width="5"/>
+            <button width="85" eventid="cancel" text="Cancel"/>
+            <strut width="5"/>
+            <button width="85" eventid="apply" text="Apply"/>
+        </panel>
+    </body>
+</xui>

@@ -1,0 +1,35 @@
+
+<xui>
+    <title value=""/>
+    <body>
+        <popupmenu id="popupme" detached="yes">
+            <menuitem image="gfx/icons/sendtochat.png" text="Send as link to chat" eventid="sendtochat"/>
+            <menuitem image="gfx/icons/download.png" text="Create link on hdd" eventid="linktohdd"/>
+            <menuitem image="gfx/icons/loadingsharenode.png" text="Open file/folder" eventid="openfile"/>
+        </popupmenu>
+        <panel opaque="false" border="0" axis="x" expand="horiz" height="24">
+            <strut width="7"/>
+            <toolbar opaque="false" id="toolbar" expand="horiz"/>
+        </panel>
+        <scrollpanel expand="both" scrollbars="optional" id="treepanel">
+            <panel axis="x">
+                <filler/>
+                <label text="Please wait..."/>
+                <filler/>
+            </panel>
+        </scrollpanel>
+        <panel border="0" axis="x" expand="horiz" bgcolor="ffffff">
+            <label border="5" bgcolor="ffffff" image="gfx/icons/tip.png" text="Tip: Right click on a folder or file to send it as a link to the chat!"/>
+            <filler/>
+        </panel>
+        <panel axis="x" opaque="false" border="8,6,0,1" expand="horiz">
+            <label id="status" text=" "/>
+            <filler expand="horiz"/>
+            <label id="status2" text=" "/>
+            <filler expand="horiz"/>
+            <label id="status3" text=" "/>
+            <filler expand="horiz"/>
+            <label id="status4" text=" "/>
+        </panel>
+    </body>
+</xui>

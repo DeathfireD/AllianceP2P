@@ -1,0 +1,136 @@
+
+<xui xmlns="http://rs.stendahls.net/XUI">
+    <title value="Alliancet" image="gfx/icons/alliance.png"/>
+    <menubar>
+        <menu text="File" mnemonic="f">
+            <menuitem eventid="hide" mnemonic="x" text="Hide window"/>
+            <menuitem eventid="exitApp" text="Exit"/>
+        </menu>
+        <menu text="View" mnemonic="w">
+            <menuitem eventid="uploads" accelerator="ctrl-u" mnemonic="u" text="Uploads"/>
+            <menu text="My share">
+                <menuitem eventid="myshare" text="Shared files" mnemonic="m" accelerator="ctrl-m"/>
+                <menuitem eventid="dups" text="Duplicates" mnemonic="d" accelerator="ctrl-d"/>
+            </menu>
+            <menuitem eventid="changelog" mnemonic="l" text="Change Log"/>
+            <menu text="Debug">
+                <!--<menuitem eventid="trace" mnemonic="t" accelerator="ctrl-t" text="Trace"/>-->
+                <menuitem eventid="console" mnemonic="d" accelerator="ctrl-y" text="Debug Console"/>
+                <menuitem eventid="connections" mnemonic="c" accelerator="ctrl-p" text="TCP/IP Connections"/>
+                <!--<menuitem eventid="friendtree" mnemonic="c" accelerator="ctrl-n"  text="Network Topology"/>-->
+            </menu>
+            <separator/>
+            <menuitem eventid="plugins" text="Plugins"/>
+            <menuitem eventid="options" accelerator="ctrl-o" mnemonic="o" text="Options"/>       
+        </menu>
+    </menubar>
+    <body>
+        <panel border="0" axis="y">
+        <panel axis="y" border="0" id="toppanel">
+
+            <!--<panel bgcolor="6b6b6b" expand="horiz" border="0" axis="x"><filler/><strut height="1"/></panel>
+                <panel bgcolor="a5a5a5" expand="horiz" border="0" axis="x"><filler/><strut height="1"/></panel>
+                <panel bgcolor="c4c4c4" expand="horiz" border="0" axis="x"><filler/><strut height="1"/></panel>
+                <panel bgcolor="e0e0e0" expand="horiz" border="0" axis="x"><filler/><strut height="1"/></panel>-->
+
+            <panel axis="x" border="0,5,5,5" shaded="yes" expand="horiz">
+                <strut width="5"/>
+                <panel axis="x" border="0,1,0,0">
+                    <button image="gfx/icons/addconnection.png" eventid="addfriendwizard" tooltip="You can either enter a connection code you received from a friend or create connection codes yourself" text="Add friends" width="240" height="44"/>
+                </panel>
+                <strut width="5"/>
+                <panel axis="x" border="0,1,0,0">
+                    <button image="gfx/icons/addshare.png" eventid="addshare" tooltip="Add folder on your computer that you want to share with your friends." text="Add files to share" width="240" height="44"/>
+                </panel>
+                <strut width="5"/>
+
+                <panel border="0,1,0,1" axis="x" id="diagrampanel" opaque="no">
+                </panel>
+                <!--<genericcomponent class="org.alliance.ui.JSpeedDiagram" id="speeddiagram"/>-->
+                <strut width="1"/>
+
+                <panel axis="y" opaque="no" border="2,0,0,0">
+                    <panel axis="x" border="0">
+                        <image src="gfx/icons/upload.png"/>
+                        <strut width="3"/>
+                        <progressbar id="bandwidthout" expand="none" minwidth="80" width="80"/>
+                    </panel>
+                    <strut height="5"/>
+                    <panel axis="x" border="0">
+                        <image src="gfx/icons/download.png"/>
+                        <strut width="3"/>
+                        <progressbar id="bandwidthin" expand="none" minwidth="80" width="80"/>
+                    </panel>
+                </panel>
+
+                <!--<panel axis="y" opaque="no" border="0,5,5,5">
+                        <filler axis="y"/>
+                        <strut height="2"/>
+                        <panel axis="x">
+                            <label text="Download:"/>
+                            <strut width="5"/>
+                            <progressbar id="bandwidthin" expand="none" minwidth="80" width="80"/>
+                        </panel>
+                        <filler axis="y"/>
+                    </panel>
+                    <strut width="1"/>
+                    <panel axis="y" opaque="no">
+                        <filler axis="y"/>
+                        <strut height="2"/>
+                        <panel axis="x">
+                            <label text="Upload:"/>
+                            <strut width="5"/>
+                            <progressbar id="bandwidthout" expand="none" minwidth="80" width="80"/>
+                        </panel>
+                        <filler axis="y"/>
+                    </panel>-->
+            </panel>
+            <panel border="0,1,0,0" axis="x" bgcolor="A8A9BB">
+                <filler/>
+            </panel>
+        </panel>
+
+        <panel axis="x" id="applicationArea" border="0" expand="both"/>
+
+            <panel axis="y" border="0">
+                <!--<panel border="0,1,0,0" axis="x" bgcolor="A8A9BB">
+                <filler/>
+                </panel>-->
+                <panel axis="x" border="3,3,3,3" expand="horiz" id="bottompanel">
+                    <!--                    <image src="gfx/icons/networktraffic_off.png" id="networktraffic"/>
+
+                   <strut width="5"/>-->
+
+                    <!--<panel axis="y" border="0,0,5,0" opaque="no">-->
+                    <!--<filler axis="y"/>-->
+                    <!--<strut height="1"/>-->
+                    <!--<progressbar expand="vert" memorymonitor="yes" id="memMonitor" width="80" minwidth="80"/>-->
+                    <!--<filler axis="y"/>-->
+                    <!--</panel>-->
+
+                    <panel axis="x" bordertype="thinlowered" border="2,1,1,1">
+                        <label text=" " id="statusbar"/>
+                        <filler axis="x"/>
+                    </panel>
+                    <strut width="4"/>
+                    <panel axis="x" border="0">
+                        <!--<panel axis="x" bordertype="thinlowered" border="2,1,1,1">-->
+                        <!--<label text=" " id="totalup" tooltip="Total bytes uploaded"/>-->
+                        <!--</panel>-->
+                        <!--<strut width="4"/>-->
+                        <!--<panel axis="x" bordertype="thinlowered" border="2,1,1,1">-->
+                        <!--<label text=" " id="totaldown" tooltip="Total bytes downloaded"/>-->
+                        <!--</panel>-->
+                        <!--<strut width="4"/>-->
+                        <panel axis="x" bordertype="thinlowered" border="2,1,1,1">
+                            <label text="Share: 40,1MiB in 7 files" id="sharing" tooltip="Your share"/>
+                        </panel>
+                        <strut width="4"/>
+                        <button text="" image="gfx/icons/refresh.png" type="flat" eventid="rescan" border="0" tooltip="Refresh share - look for new files in shares"/>
+                        <strut width="2"/>
+                    </panel>
+                </panel>
+            </panel>
+        </panel>
+    </body>
+</xui>

@@ -1,0 +1,83 @@
+<xui>
+    <title value="Alliance"/>
+    <menubar>
+        <menu id="filemenu" text="%text%" mnemonic="f">
+            <menuitem eventid="hide" text="%text%"/>
+            <menuitem eventid="exitapp" text="%text%"/>
+        </menu>
+        <menu id="viewmenu" text="%text%" mnemonic="v">
+            <menuitem eventid="uploads" accelerator="ctrl-u" mnemonic="u" text="%text%"/>
+            <menu id="sharemenu" text="%text%">
+                <menuitem eventid="myshare" text="%text%" mnemonic="m" accelerator="ctrl-m"/>
+                <menuitem eventid="dups" text="%text%" mnemonic="d" accelerator="ctrl-d"/>
+            </menu>
+            <menuitem eventid="invitations" text="%text%"/>
+            <menuitem eventid="changelog" text="%text%"/>
+            <menuitem eventid="chathistory" text="%text%"/>
+            <menu id="debugmenu" text="%text%">
+                <menuitem eventid="trace" mnemonic="t" accelerator="ctrl-t" text="%text%"/>
+                <menuitem eventid="console" mnemonic="d" accelerator="ctrl-y" text="%text%"/>
+                <menuitem eventid="connections" mnemonic="p" accelerator="ctrl-p" text="%text%"/>
+                <menuitem eventid="friendtree" mnemonic="n" accelerator="ctrl-n"  text="%text%"/>
+            </menu>
+            <separator/>
+            <menuitem eventid="plugins" text="%text%"/>
+            <menuitem eventid="options" mnemonic="o" accelerator="ctrl-o" text="%text%"/>
+            <menuitem eventid="shares" mnemonic="s" accelerator="ctrl-s" text="%text%"/>
+        </menu>
+    </menubar>
+    <body>
+        <panel axis="y" border="0" id="toppanel">
+            <panel axis="x" border="0,5,5,5" expand="horiz">
+                <strut width="5"/>
+                <panel axis="x" border="0,1,0,0">
+                    <button image="gfx/icons/addconnection.png" eventid="addfriendwizard" tooltip="%text%" text="%text%" width="240" height="44"/>
+                </panel>
+                <strut width="5"/>
+                <panel axis="x" border="0,1,0,0">
+                    <button image="gfx/icons/addshare.png" eventid="addshare" tooltip="%text%" text="%text%" width="240" height="44"/>
+                </panel>
+                <strut width="5"/>
+                <panel border="0,1,0,1" axis="x" id="diagrampanel">
+                </panel>
+                <strut width="1"/>
+                <panel axis="y" border="2,0,0,0">
+                    <panel axis="x" border="0">
+                        <image src="gfx/icons/upload.png"/>
+                        <strut width="3"/>
+                        <progressbar id="bandwidthout" expand="none" minwidth="80" width="80"/>
+                    </panel>
+                    <strut height="5"/>
+                    <panel axis="x" border="0">
+                        <image src="gfx/icons/download.png"/>
+                        <strut width="3"/>
+                        <progressbar id="bandwidthin" expand="none" minwidth="80" width="80"/>
+                    </panel>
+                </panel>
+            </panel>
+        </panel>
+        <panel border="0,1,0,0" height="6" maxheight="6" minheight="6" axis="x" id="fakeShadow" expand="both">
+            <filler/>
+        </panel>
+        <panel axis="x" id="applicationArea" border="0" expand="both">
+        </panel>
+        <panel axis="y" border="0">
+            <panel axis="x" border="3,3,3,3" expand="horiz" id="bottompanel">
+                <panel heigth="30" id="statuspanel" axis="x" bordertype="thinlowered" border="2,1,1,1">
+                    <label id="statusbar"/>
+                    <filler axis="x"/>
+                </panel>
+                <strut width="4"/>
+                <panel axis="x" border="0">
+                    <panel axis="x" bordertype="thinlowered" border="2,1,1,1">
+                        <label text="%text%" id="sharing" tooltip="%text%"/>
+                    </panel>
+                    <strut width="4"/>
+                    <button id="rescan" image="gfx/icons/refresh.png" type="flat" eventid="rescan" border="0"/>
+                    <strut width="2"/>
+                </panel>
+            </panel>
+            <filler/>
+        </panel>
+    </body>
+</xui>

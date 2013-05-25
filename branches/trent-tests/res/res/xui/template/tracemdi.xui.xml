@@ -1,0 +1,25 @@
+<xui>
+    <title value=""/>
+    <body>
+        <panel border="0" axis="y">
+            <panel axis="y" border="0">
+                <scrollpanel id="scroll" expand="both" scrollbars="optional" bordertype="lowered">
+                    <table id="table">
+                    </table>
+                </scrollpanel>
+            </panel>
+            <panel axis="y" border="0">
+                <panel axis="x" border="0" id="channels">
+                </panel>
+                <filler/>
+                <panel axis="x" border="0" id="levels">
+                    <checkbox text="trace" eventid="trace"/>
+                    <checkbox text="debug" eventid="debug"/>
+                    <checkbox text="info" eventid="info"/>
+                    <strut height="5"/>
+                    <checkbox text="Autoscroll" id="autoscroll"/>
+                </panel>
+            </panel>
+        </panel>
+    </body>
+</xui>

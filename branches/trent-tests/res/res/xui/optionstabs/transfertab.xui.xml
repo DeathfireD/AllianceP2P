@@ -1,0 +1,56 @@
+<xui>
+    <body>
+        <panel axis="y" id="transfertab">
+            <scrollpanel border="0" scrollbars="optional">
+                <panel border="0" axis="y">
+                    <panel id="upload" axis="y" bordertype="etched" bordertitle="%text%">
+                        <form expand="horiz" border="5">
+                            <row>
+                                <cell>
+                                    <label id="upmax" text="%text%"/>
+                                </cell>
+                                <cell>
+                                    <panel border="0" axis="x">
+                                        <filler axis="x"/>
+                                        <textfield width="50" minwidth="50" maxwidth="50" id="internal.uploadthrottle"/>
+                                        <label text=" KiB/s"/>
+                                    </panel>
+                                </cell>
+                            </row>
+                        </form>
+                        <panel axis="x">
+                            <mlabel id="uploadnote" expand="horiz" html="true">%text%
+                            </mlabel>
+                        </panel>
+                    </panel>
+                    <panel id="download" axis="y" bordertype="etched" bordertitle="%text%">
+                        <form expand="horiz" border="5">
+                            <row>
+                                <cell>
+                                    <panel border="0" axis="y">
+                                        <filler/>
+                                        <label id="downdir" text="%text%"/>
+                                    </panel>
+                                </cell>
+                                <cell>
+                                    <panel border="0" axis="x">
+                                        <filler axis="x"/>
+                                        <textfield width="250" minwidth="250" maxwidth="250" id="internal.downloadfolder"/>
+                                    </panel>
+                                </cell>
+                            </row>
+                        </form>
+                        <panel axis="x">
+                            <filler/>
+                            <button eventid="browse" text="%text%"/>
+                        </panel>
+                        <panel axis="x">
+                            <mlabel id="downnote" html="true">%text%
+                            </mlabel>
+                        </panel>
+                    </panel>
+                </panel>
+            </scrollpanel>
+        </panel>
+    </body>
+</xui>

@@ -1,0 +1,274 @@
+#summary Create a PlugIn
+
+= Create a Basic Plugin =
+
+First, all your friends should have at least version 1.0.6.  (Instructions for trunk from code.google.com are also included.)
+
+  # Create a new directory to hold the files.
+  # Create a Java file that implements the !PlugIn interface.  In v 1.0.6 and later, that means 2 methods: init and shutdown.  To do something useful, you'll want to add a UICallback that does something; see Exhibit A1 for an example.  (If you're working on trunk things are slightly different, such as the additional !PlugIn.getConsoleExtensions method; see Exhibit A2 for an example.)
+  # Compiling it is easy with the program jar available; here's my command:
+{{{
+javac -classpath ../dl/Alliance-v1.0.6.jar HelloWorldPlugIn.java
+}}}
+  # For trunk, create a file named "Alliance.config" that contains the name of your Java class.  (This isn't totally necessary because Alliance will take the first class that implements !PlugIn, but it will speed your load time... one millisecond vs. one millisecond per class in your jar.)
+  # Create the jar. Here's my command:
+{{{
+jar -cf alliance-hello.jar *
+}}}
+  # Now, everyone who wants to use the plugin should add this plugin to their installation.  In v 1.0.6, add the following lines in place of the `<pluginlist/>` line (with your own jar location, of course):
+{{{
+  <pluginlist>
+    <plugin jar="/Users/tlarson/Documents/dev/alliance/working-plugin-1.0.6/HelloWorldPlugin.jar" pluginclass="HelloWorldPlugin"/>
+  </pluginlist>
+}}}
+  In trunk code, add the jar directly in the Alliance app under "View" and "Plugins".
+
+
+
+In trunk, there's a way to add to the console commands; Exhibit B shows an example of a !ConsolePlugInExtension.
+
+
+
+
+== Exhibit A1: !HelloWorldPlugin for v 1.0.6 ==
+v 1.0.6 thru v 1.1.1, up to r 234 at code.google.com
+{{{
+import org.alliance.core.CoreSubsystem;
+import org.alliance.core.NeedsUserInteraction;
+import org.alliance.core.NonWindowUICallback;
+import org.alliance.core.UICallback;
+import org.alliance.core.comm.SearchHit;
+import org.alliance.core.comm.rpc.ChatMessageV3;
+import org.alliance.core.interactions.PostMessageInteraction;
+import org.alliance.core.interactions.PostMessageToAllInteraction;
+import org.alliance.core.node.Friend;
+import org.alliance.core.node.Node;
+import org.alliance.core.plugins.PlugIn;
+
+import java.io.IOException;
+import java.util.List;
+
+/**
+ * 
+ * To make this fire, add it to one (and only one) of your installations,
+ * then run that and another instance with the '/AllowMultipleInstances' flag,
+ * then have the second instance send a private chat to the first.
+ * You'll see an additional message for every chat you send.
+ * 
+ * Date: 2008-jun-06
+ * Time: 11:59:37
+ */
+public class HelloWorldPlugin extends NonWindowUICallback implements PlugIn, UICallback {
+    private CoreSubsystem core;
+
+    // **************************** Methods implementing the PlugIn interface ***************************************
+
+    /** Called when Alliance is starting. This is the entry point to your plugin. */
+    public void init(CoreSubsystem core) throws Exception {
+        System.out.println("HelloWorldPlugin launching, yay!");
+        this.core = core;
+
+        //hooks all sorts of callbacks that Alliance will generate - look in the UICallback interface
+        core.addUICallback(this);
+    }
+
+    /** Called when Alliance is shutting down. */
+    public void shutdown() throws IOException {
+        System.out.println("HelloWorldPlugin shutting down =(");
+    }
+
+    // ************************** Methods implementing the UICallback interface *************************************
+
+    /**
+     * When the UI is started our callback might get removed from the CoreSubsystem. In that case we need to
+     * re-register our callback.  (See issue 148.  Fixed on trunk.)
+     */
+    public void callbackRemoved() {
+        core.addUICallback(this);
+    }
+
+    /**
+     * Every time a new user interaction is queued this method is called. User interactions are things that the used
+     * needs to be informed of. One interesting user interaction is the PostMessageInteraction. It is invoked when
+     * a chat message is received. That's what this example method looks for.
+     * @param ui The user interaction that was just queued
+     */
+    public void newUserInteractionQueued(NeedsUserInteraction ui) {
+        try {
+            if (ui instanceof PostMessageInteraction) {
+                //this is a PostMessageInteraction - someone sent a chat message
+
+                if (ui instanceof PostMessageToAllInteraction) {
+                    //this was a chat message sent in the public chat to everyone - ignore it
+                    return;
+                }
+
+                //it's a private message to our bot - let's reply to it!
+                PostMessageInteraction p = (PostMessageInteraction)ui;
+
+                //get the friend that sent the message
+                Friend friend = core.getFriendManager().getFriend(p.getFromGuid());
+
+                //create the chat message string
+                String message = "Hello "+
+                        friend.nickname()+"! Did you know that your highest recorded download speed is "+
+                        friend.getHighestIncomingCPS()+" bytes per second?!";
+
+                //create a chat message RPC that is private to only one user
+                ChatMessageV3 chatMessage = new ChatMessageV3(message, false);
+
+                //send the chat message to the friend
+                core.getNetworkManager().sendPersistantly(chatMessage, friend);
+            }
+        } catch (IOException e) {
+            core.reportError(e, this);
+        }
+    }
+
+}
+
+}}}
+
+
+
+
+
+== Exhibit A2: !HelloWorldPlugin for trunk ==
+v 1.2.0 and later, r 235 and later at code.google.com
+{{{
+package org.alliance.helloworldplugin;
+
+import org.alliance.core.CoreSubsystem;
+import org.alliance.core.NeedsUserInteraction;
+import org.alliance.core.NonWindowUICallback;
+import org.alliance.core.UICallback;
+import org.alliance.core.plugins.ConsolePlugInExtension;
+import org.alliance.core.comm.SearchHit;
+import org.alliance.core.comm.rpc.ChatMessage;
+import org.alliance.core.interactions.PostMessageInteraction;
+import org.alliance.core.interactions.PostMessageToAllInteraction;
+import org.alliance.core.node.Friend;
+import org.alliance.core.node.Node;
+import org.alliance.core.plugins.PlugIn;
+
+import java.io.IOException;
+import java.util.List;
+
+/**
+ * 
+ * To make this fire, add it to one (and only one) of your installations,
+ * then run that and another instance with the '/AllowMultipleInstances' flag,
+ * then have the second instance send a private chat to the first.
+ * You'll see an additional message for every chat you send.
+ * 
+ * Date: 2008-jun-06
+ * Time: 11:59:37
+ */
+public class HelloWorldPlugin extends NonWindowUICallback implements PlugIn, UICallback {
+    private CoreSubsystem core;
+
+    // **************************** Methods implementing the PlugIn interface ***************************************
+
+    /** Called when Alliance is starting. This is the entry point to your plugin. */
+    public void init(CoreSubsystem core) throws Exception {
+        System.out.println("HelloWorldPlugin launching, yay!");
+        this.core = core;
+
+        //hooks all sorts of callbacks that Alliance will generate - look in the UICallback interface
+        core.addUICallback(this);
+    }
+
+    /** Called when Alliance is shutting down. */
+    public void shutdown() throws IOException {
+        System.out.println("HelloWorldPlugin shutting down =(");
+        // Note that we should disable the UICallback here (eg. for when plugins change and PlugIns are initialized again).
+    }
+
+    // ************************** Methods implementing the UICallback interface *************************************
+
+    /**
+     * Every time a new user interaction is queued this method is called. User interactions are things that the used
+     * needs to be informed of. One interesting user interaction is the PostMessageInteraction. It is invoked when
+     * a chat message is received. That's what this example method looks for.
+     * @param ui The user interaction that was just queued
+     */
+    public void newUserInteractionQueued(NeedsUserInteraction ui) {
+        try {
+            if (ui instanceof PostMessageInteraction) {
+                //this is a PostMessageInteraction - someone sent a chat message
+
+                if (ui instanceof PostMessageToAllInteraction) {
+                    //this was a chat message sent in the public chat to everyone - ignore it
+                    return;
+                }
+
+                //it's a private message to our bot - let's reply to it!
+                PostMessageInteraction p = (PostMessageInteraction)ui;
+
+                //get the friend that sent the message
+                Friend friend = core.getFriendManager().getFriend(p.getFromGuid());
+
+                //create the chat message string
+                String message = "Hello "+
+                        friend.getNickname()+"! Did you know that your highest recorded download speed is "+
+                        friend.getHighestIncomingCPS()+" bytes per second?!";
+
+                //create a chat message RPC that is private to only one user
+                ChatMessage chatMessage = new ChatMessage(message, false);
+
+                //send the chat message to the friend
+                core.getNetworkManager().sendPersistantly(chatMessage, friend);
+            }
+        } catch (IOException e) {
+            core.reportError(e, this);
+        }
+    }
+
+    public ConsolePlugInExtension getConsoleExtensions() { return null; }
+
+}
+
+}}}
+
+
+
+
+
+
+
+== Exhibit B: !HelloWorldPlugin for trunk ==
+{{{
+import org.alliance.core.CoreSubsystem;
+import org.alliance.core.plugins.ConsolePlugInExtension;
+import org.alliance.core.plugins.PlugIn;
+import org.alliance.launchers.console.Console.Printer;
+
+/**
+ * To use this, type 'hello' in the console (under 'View' -> 'Debug' -> 'Debug Console'.
+ * 
+ */
+public class HelloPlugIn implements PlugIn {
+
+    public void init(CoreSubsystem core) throws Exception {
+    }
+
+    public void shutdown() throws Exception {
+    }
+
+    public ConsolePlugInExtension getConsoleExtensions() {
+        return new ConsolePlugInExtension() {
+            /**
+             * @return true so they don't get an 'unknown command' message
+             */
+            public boolean handleLine(String line, Printer print) {
+                if (line.startsWith("hello")) {
+                    print.println("Hello, world!  You said: " + line);
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        };
+    }
+}
+}}}

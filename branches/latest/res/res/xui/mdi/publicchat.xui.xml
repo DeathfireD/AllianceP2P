@@ -1,0 +1,22 @@
+
+<xui>
+    <title value=""/>
+    <body>
+        <panel opaque="false" border="0" axis="x" expand="horiz" height="24">
+            <strut width="7"/>
+            <toolbar opaque="false" id="toolbar" expand="horiz"/>
+        </panel>
+        <scrollpanel expand="both" scrollbars="optional" id="scrollpanel" bordertype="lowered">
+            <textarea id="textarea"/>
+        </scrollpanel>
+        <panel axis="x" expand="horiz">
+            <textfield eventid="chat1"/>
+            <strut width="5"/>
+            <button eventid="chat2" text="Send"/>
+        </panel>
+        <panel axis="x" opaque="false" border="8,6,0,1" expand="horiz">
+            <label id="status" text=" "/>
+            <filler expand="horiz"/>
+        </panel>
+    </body>
+</xui>

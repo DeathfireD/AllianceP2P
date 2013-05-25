@@ -1,0 +1,14 @@
+<xui>
+    <body>
+        <tabbedpanel width="475" height="500" id="tab">
+        </tabbedpanel>
+        <panel border="5" axis="x" expand="horiz">
+            <filler axis="x"/>
+            <button width="85" eventid="ok" text="%text%"/>
+            <strut width="5"/>
+            <button width="85" eventid="cancel" text="%text%"/>
+            <strut width="5"/>
+            <button width="85" eventid="apply" text="%text%"/>
+        </panel>
+    </body>
+</xui>

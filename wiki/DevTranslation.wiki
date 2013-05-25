@@ -1,0 +1,20 @@
+#summary Developers Corner - Translation Guide.
+#labels Phase-Implementation
+= Steps necessary for translating  =
+
+  *  Make copy of alliance_en.properties [http://alliancep2pbeta.googlecode.com/svn/trunk/working/language/alliance_en.properties download]
+  *  Change language code to your own: alliance_en -> alliance_de, alliance_fr ... alliance_ja. Some of codes are at bottom of [http://code.google.com/p/support/wiki/WikiSyntax this] page
+  *  Text in brackets _*<%*TEXT*%>*_ does not need to be translated but if you wish to, you can (It's only information used in the background). If changed make sure there are no spaces used. (ex. "test this" is wrong. Change it to test_this).
+  *  File should be save as UTF-8
+
+When you've finished translating the file you can post it on the Issue tracker. Make sure you select "Submit Patch" template so we know.
+
+::Languages done or currently being worked on::
+
+* Swedish
+
+* French
+
+* Spanish
+
+* Swedish

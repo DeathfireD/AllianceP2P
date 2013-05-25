@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xui xmlns="http://rs.stendahls.net/XUI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://rs.stendahls.net/XUI
+Q:\rs.stendahls.net\XUI\xui.xsd">
+    <title value="Import stuff"/>
+    <body>
+        <popupmenu id="popup" detached="yes">
+            <menuitem image="gfx/icons/download.png" text="Download" eventid="download"/>
+        </popupmenu>
+        <panel opaque="false" border="0,0,0,0" axis="x" expand="horiz" height="24">
+            <panel axis="x" border="0">
+                <strut width="5"/>
+                <label text="Search for:"/>
+                <strut width="5"/>
+                <textfield eventid="search1"/>
+                <strut width="5"/>
+                <label text="in"/>
+                <strut width="5"/>
+                <dropdown id="type"/>
+                <strut width="5"/>
+                <button eventid="search2" text="Search"/>
+                <strut width="5"/>
+            </panel>
+        </panel>
+        <panel axis="y" border="0">
+            <panel axis="x" border="2,0,0,0">
+                <toolbar opaque="false" id="toolbar" expand="horiz"/>
+            </panel>
+            <scrollpanel expand="both" scrollbars="optional" id="treepanel" bordertype="none">
+                <table id="table"/>
+            </scrollpanel>
+            <panel axis="x" border="0,5,0,2" maxheight="102">
+                <strut width="8"/>
+                <image src="gfx/icons/tip.png"/>
+                <strut width="8"/>
+                <mlabel id="label" html="yes">Look for popular files in: &#160; [a href="http://2"]Video[/a] &#160; [a href="http://1"]Audio[/a] &#160; [a href="http://3"]CD/DVD Images[/a] &#160; [a href="http://5"]Pictures[/a] &#160; [a href="http://6"]Documents[/a] &#160; [a href="http://4"]Archives[/a] &#160; [a href="http://7"]Presentations[/a][br]Tip: Click on "Days Ago" column to get new files first. Click on "Speed" to get fastest downloads first.</mlabel>
+            </panel>
+        </panel>
+        <panel axis="x" opaque="false" border="8,6,0,1" expand="horiz">
+            <label id="left" text=" "/>
+            <filler expand="horiz"/>
+            <label id="right" text=" "/>
+            <strut width="5"/>
+        </panel>
+    </body>
+</xui>
+

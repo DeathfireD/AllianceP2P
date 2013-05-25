@@ -1,0 +1,39 @@
+<xui>
+    <body>
+        <panel axis="y" id="firewalltab">
+            <scrollpanel border="0" scrollbars="optional">
+                <panel border="0" axis="y">
+                    <panel id="firewall" axis="y" bordertype="etched" bordertitle="%text%">
+                        <panel axis="x" expand="horiz">
+                            <mlabel id="info" html="true">%text%
+                            </mlabel>
+                        </panel>
+                        <panel axis="x" border="0" expand="horiz">
+                            <checkbox id="internal.enableiprules" text="%text%"/>
+                            <filler/>
+                        </panel>
+                        <panel axis="x" border="0">
+                            <scrollpanel bordertype="lowered">
+                                <list id="rulelist"/>
+                            </scrollpanel>
+                        </panel>
+                        <strut height="5"/>
+                        <panel border="0" axis="x" expand="horiz">
+                            <filler/>
+                            <button text="" tooltip="Add new rule" image="gfx/icons/add.png" type="flat" eventid="addrule"/>
+                            <strut width="5"/>
+                            <button text="" tooltip="Remove selected rule" image="gfx/icons/remove.png" type="flat" eventid="removerule"/>
+                            <strut width="5"/>
+                            <button text="" tooltip="Move selected rule up" image="gfx/icons/up.png" type="flat" eventid="moveruleup"/>
+                            <strut width="5"/>
+                            <button text="" tooltip="More selected rule down" image="gfx/icons/down.png" type="flat" eventid="moveruledown"/>
+                            <strut width="5"/>
+                            <button text="" tooltip="Edit selected rule" image="gfx/icons/edit.png" type="flat" eventid="editrule"/>
+                        </panel>
+                    </panel>
+                </panel>
+            </scrollpanel>
+        </panel>
+    </body>
+</xui>
+

@@ -1,0 +1,40 @@
+<xui>
+    <body>
+        <popupmenu id="popup" detached="yes">
+            <menuitem image="gfx/icons/download.png" text="%text%" eventid="download"/>
+            <menu id="downloadto" image="gfx/icons/download.png" text="%text%">
+                <menuitem image="gfx/icons/download.png" text="%text%" eventid="browse"/>
+            </menu>
+        </popupmenu>
+        <panel opaque="false" border="0" axis="x" expand="horiz" height="24">
+            <toolbar opaque="false" id="toolbar" expand="horiz"/>
+        </panel>
+        <panel axis="y" border="0">
+            <scrollpanel expand="both" scrollbars="optional" id="treepanel" bordertype="lowered">
+                <panel axis="x">
+                    <filler/>
+                    <label id="wait" text="%text%"/>
+                    <filler/>
+                </panel>
+            </scrollpanel>
+        </panel>
+        <panel id="themed" border="5" axis="x" expand="horiz">
+            <image src="gfx/icons/tip.png"/>
+            <strut width="3"/>
+            <panel opaque="false" axis="y" border="0,0,0,0" expand="horiz">
+                <mlabel html="yes" id="chatmessage"/>
+            </panel>
+            <filler/>
+        </panel>
+        <panel axis="x" opaque="false" border="8,6,0,1" expand="horiz">
+            <label id="status" text=" "/>
+            <filler expand="horiz"/>
+            <label id="status2" text=" "/>
+            <filler expand="horiz"/>
+            <label id="status3" text=" "/>
+            <filler expand="horiz"/>
+            <label id="status4" text=" "/>
+            <strut width="5"/>
+        </panel>
+    </body>
+</xui>

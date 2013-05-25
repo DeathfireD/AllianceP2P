@@ -1,0 +1,37 @@
+
+<xui>
+    <title value="Add IP range rule" image="gfx/icons/alliance.png"/>
+    <body>
+        <panel border="10" axis="y">
+            <panel border="5" axis="x" expand="horiz">
+                <label text="Address "/>
+                <textfield width="30" minwidth="30" maxwidth="30" maxcolumns="3" id="ip_addr1"/>
+                <label text="."/>
+                <textfield width="30" minwidth="30" maxwidth="30" id="ip_addr2"/>
+                <label text="."/>
+                <textfield width="30" minwidth="30" maxwidth="30" id="ip_addr3"/>
+                <label text="."/>
+                <textfield width="30" minwidth="30" maxwidth="30" id="ip_addr4"/>
+                <strut width="20"/>
+                <label text=" Mask "/>
+                <textfield width="30" minwidth="30" maxwidth="30" id="ip_addr_mask"/>
+                <filler expand="horiz"/>
+            </panel>
+            <strut height="10"/>
+            <panel axis="x" border="0" expand="horiz">
+                <strut width="10"/>
+                <radiobutton eventid="radioAllow" id="a" group="a" text="Allow"/>
+                <strut width="10"/>
+                <radiobutton eventid="radioDeny" id="b" group="a" text="Deny"/>
+                <filler/>
+            </panel>
+            <strut height="10"/>
+            <panel axis="x" border="0" expand="horiz">
+                <filler axis="x"/>
+                <button text="OK" eventid="accept" width="80"/>
+                <strut width="10"/>
+                <button text="Cancel" eventid="cancel" width="80"/>
+            </panel>
+        </panel>
+    </body>
+</xui>

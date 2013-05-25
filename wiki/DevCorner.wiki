@@ -1,0 +1,12 @@
+#summary Developers Corner.
+#labels Phase-Implementation,Featured
+
+= Developers Corner =
+
+Index:
+
+  * [DevBasic Basic info about source hierarchy]
+  * [DevNetBeans Creating Alliance project with NetBeans]
+  * [DevTranslation Translation Guide]
+  * [DevPreview Preview Build]
+  * [DevPlugin PlugIn Instructions]

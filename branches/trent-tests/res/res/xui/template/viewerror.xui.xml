@@ -1,0 +1,13 @@
+<xui>
+    <body>
+        <panel axis="y">
+            <scrollpanel scrollbars="optional" width="600" height="460" bordertype="lowered">
+                <textarea text="%text%" id="reportarea"/>
+            </scrollpanel>
+            <panel axis="x" border="0, 5, 0, 0" expand="horiz">
+                <filler/>              
+                <button id="close" text="%text%" action="dispose"/>
+            </panel>
+        </panel>
+    </body>
+</xui>

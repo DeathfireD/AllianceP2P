@@ -1,0 +1,158 @@
+<xui>
+    <body>
+        <panel axis="y" id="generaltab">
+            <scrollpanel border="0" scrollbars="optional">
+                <panel border="0" axis="y">
+                    <panel id="personal" axis="y" bordertype="etched" bordertitle="%text%">
+                        <form expand="horiz" border="5">
+                            <row>
+                                <cell>
+                                    <panel border="0" axis="y">
+                                        <filler/>
+                                        <label id="nickname" text="%text%"/>
+                                    </panel>
+                                </cell>
+                                <cell>
+                                    <panel border="0" axis="x">
+                                        <textfield expand="horiz" width="250" minwidth="250" maxwidth="500" id="my.nickname"/>
+                                    </panel>
+                                </cell>
+                            </row>
+                        </form>
+                        <panel axis="x">
+                            <mlabel id="nicknote" html="true">%text%
+                            </mlabel>
+                        </panel>
+                    </panel>
+                    <panel id="guioptions" axis="y" bordertype="etched" bordertitle="%text%">
+                        <form expand="horiz" border="5">
+                            <row>
+                                <cell>
+                                    <panel border="0" axis="y">
+                                        <filler/>
+                                        <label id="lang" text="%text%"/>
+                                    </panel>
+                                </cell>
+                                <cell>
+                                    <panel border="0" axis="x">
+                                        <dropdown expand="horiz" width="250" minwidth="250" maxwidth="500" id="internal.language"/>
+                                    </panel>
+                                </cell>
+                            </row>
+                            <row>
+                                <cell>
+                                    <panel border="0" axis="y">
+                                        <filler/>
+                                        <label id="skin" text="%text%"/>
+                                    </panel>
+                                </cell>
+                                <cell>
+                                    <panel border="0" axis="x">
+                                        <dropdown expand="horiz" width="250" minwidth="250" maxwidth="500" id="internal.guiskin">
+                                            <option text="Alliance"/>
+                                            <option text="OS Native"/>
+                                            <option text="Autumn"/>
+                                            <option text="Business"/>
+                                            <option text="Business Black Steel"/>
+                                            <option text="Business Blue Steel"/>
+                                            <option text="Challenger Deep"/>
+                                            <option text="Creme"/>
+                                            <option text="Creme Coffee"/>
+                                            <option text="Dust"/>
+                                            <option text="Dust Coffee"/>
+                                            <option text="Emerald Dusk"/>
+                                            <option text="Gemini"/>
+                                            <option text="Graphite"/>
+                                            <option text="Graphite Aqua"/>
+                                            <option text="Graphite Glass"/>
+                                            <option text="Magellan"/>
+                                            <option text="Mist Aqua"/>
+                                            <option text="Mist Silver"/>
+                                            <option text="Moderate"/>
+                                            <option text="Nebula"/>
+                                            <option text="Nebula Brick Wall"/>
+                                            <option text="Office Blue 2007"/>
+                                            <option text="Office Silver 2007"/>
+                                            <option text="Raven"/>
+                                            <option text="Sahara"/>      
+                                            <option text="Twilight"/>
+                                        </dropdown>
+                                    </panel>
+                                </cell>
+                            </row>
+                            <row>
+                                <cell>
+                                    <panel border="0" axis="y">
+                                        <filler/>
+                                        <label id="gfont" text="%text%"/>
+                                    </panel>
+                                </cell>
+                                <cell>
+                                    <panel border="0" axis="x">
+                                        <dropdown expand="horiz" width="175" minwidth="175" maxwidth="500" id="internal.globalfont">
+                                        </dropdown>
+                                        <strut width="5"/>
+                                        <label id="globalsize" text="%text%"/>
+                                        <strut width="5"/>
+                                        <dropdown width="50" minwidth="50" maxwidth="50" id="internal.globalsize">
+                                        </dropdown>
+                                    </panel>
+                                </cell>
+                            </row>
+                            <row>
+                                <cell>
+                                    <panel border="0" axis="y">
+                                        <filler/>
+                                        <label id="cfont" text="%text%"/>
+                                    </panel>
+                                </cell>
+                                <cell>
+                                    <panel border="0" axis="x">
+                                        <dropdown expand="horiz" width="175" minwidth="175" maxwidth="500" id="internal.chatfont">
+                                        </dropdown>
+                                        <strut width="5"/>
+                                        <label id="chatsize" text="%text%"/>
+                                        <strut width="5"/>
+                                        <dropdown width="50" minwidth="50" maxwidth="50" id="internal.chatsize">
+                                        </dropdown>
+                                    </panel>
+                                </cell>
+                            </row>
+                        </form>
+                        <panel axis="x">
+                            <mlabel id="guinote" html="true">%text%
+                            </mlabel>
+                        </panel>
+                    </panel>
+                    <panel id="tray" axis="y" bordertype="etched" bordertitle="%text%">
+                        <panel axis="x" expand="horiz">
+                            <label id="bubble" text="%text%"/>
+                            <filler/>
+                        </panel>
+                        <panel border="0" axis="x" expand="horiz">
+                            <strut width="5"/>
+                            <checkbox id="internal.showpublicchatmessagesintray" text="%text%"/>
+                            <filler/>
+                        </panel>
+                        <panel border="0" axis="x" expand="horiz">
+                            <strut width="5"/>
+                            <checkbox id="internal.showprivatechatmessagesintray" text="%text%"/>
+                            <filler/>
+                        </panel>
+                        <panel border="0" axis="x" expand="horiz">
+                            <strut width="5"/>
+                            <checkbox id="internal.showsystemmessagesintray" text="%text%"/>
+                            <filler/>
+                        </panel>
+                    </panel>
+                    <panel id="utf" axis="y" bordertype="etched" bordertitle="%text%">
+                        <panel border="0" axis="x" expand="horiz">
+                            <checkbox id="internal.enablesupportfornonenglishcharacters" text="%text%"/>
+                            <filler/>
+                        </panel>
+                    </panel>
+                </panel>
+            </scrollpanel>
+        </panel>
+    </body>
+</xui>

@@ -1,0 +1,45 @@
+<xui>
+    <body>
+        <popupmenu id="popup" detached="yes">
+            <menuitem image="gfx/icons/download.png" text="%text%" eventid="download"/>
+        </popupmenu>
+        <panel opaque="false" border="0" axis="x" expand="horiz" height="24">
+            <toolbar opaque="false" id="toolbar" expand="horiz"/>
+        </panel>
+        <panel axis="y" border="0">
+            <scrollpanel expand="both" scrollbars="optional" id="treepanel" bordertype="lowered">
+                <table id="table"/>
+            </scrollpanel>
+        </panel>
+        <panel id="themed" axis="y" border="5">
+            <panel opaque="false" border="0,0,0,0" axis="x" expand="horiz" height="24">
+                <panel axis="x" border="0">
+                    <strut width="5"/>
+                    <label id="searchfor" text="%text%"/>
+                    <strut width="5"/>
+                    <textfield opaque="true" eventid="search1"/>
+                    <strut width="5"/>
+                    <label id="typelabel" text="%text%"/>
+                    <strut width="5"/>
+                    <dropdown id="type"/>
+                    <strut width="5"/>
+                    <button eventid="search2" text="%text%"/>
+                    <strut width="5"/>
+                </panel>
+            </panel>
+            <panel opaque="false" axis="x" border="0,5,0,2" maxheight="102">
+                <strut width="8"/>
+                <image src="gfx/icons/tip.png"/>
+                <strut width="8"/>
+                <mlabel id="label" html="yes"/>
+            </panel>
+        </panel>
+        <panel axis="x" opaque="false" border="8,6,0,1" expand="horiz">
+            <label id="left" text=" "/>
+            <filler expand="horiz"/>
+            <label id="right" text=" "/>
+            <strut width="5"/>
+        </panel>
+    </body>
+</xui>
+

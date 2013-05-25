@@ -1,0 +1,137 @@
+
+<xui>
+    <body>
+        <wizard id="wizard" implementation="org.alliance.ui.addfriendwizard.AddFriendWizard" image="gfx/wizardimage.jpg">
+            <step>
+                <mlabel id="helptext" html="yes">%text%
+                </mlabel>
+                <strut height="5"/>
+                <panel axis="x" border="0" expand="horiz">
+                    <strut width="10"/>
+                    <radiobutton eventid="radio1_1" group="a" text="%text%"/>
+                    <filler/>
+                </panel>
+                <panel axis="x" border="0" expand="horiz">
+                    <strut width="10"/>
+                    <radiobutton eventid="radio1_2" group="a" text="%text%"/>
+                    <filler/>
+                </panel>
+                <panel axis="x" border="0" expand="horiz">
+                    <strut width="10"/>
+                    <radiobutton eventid="radio1_4" group="a" text="%text%"/>
+                    <filler/>
+                </panel>
+                <panel axis="x" border="0" expand="horiz">
+                    <strut width="10"/>
+                    <radiobutton eventid="radio1_3" group="a" text="%text%"/>
+                    <filler/>
+                </panel>
+                <strut height="5"/>
+            </step>
+            <step text="%stepinvitation%">
+                <mlabel id="inviationlimit" html="yes">%text%
+                </mlabel>
+                <strut height="5"/>
+                <panel axis="x" border="0" expand="horiz">
+                    <strut width="10"/>
+                    <radiobutton eventid="radio2_1" group="b" text="%text%"/>
+                    <filler/>
+                </panel>
+                <strut height="3"/>
+                <panel axis="x" border="0" expand="horiz">
+                    <strut width="10"/>
+                    <radiobutton eventid="radio2_2" group="b" text="%text%"/>
+                    <filler/>
+                </panel>
+                <panel axis="x" border="0" expand="horiz">
+                    <strut width="10"/>
+                    <radiobutton eventid="radio2_3" group="b" text="%text%"/>
+                    <textfield text="7" width="50" maxwidth="50" minwidth="50" id="daylimit"/>
+                    <strut width="5"/>
+                    <label id="day" text="%text%"/>
+                    <filler/>
+                </panel>
+                <strut height="5"/>
+            </step>
+            <step text="%stepcode%">
+                <mlabel id="entercode" html="yes">%text%
+                </mlabel>
+                <strut height="15"/>
+                <panel axis="x" border="0" expand="horiz">
+                    <label id="codelabel" text="%text%"/>
+                    <textfield id="codeinput" defaultfocus="true"/>
+                    <strut width="5"/>
+                </panel>
+                <strut height="15"/>
+                <mlabel id="codecopy" html="yes">%text%
+                </mlabel>
+            </step>
+            <step text="%stepwrongcode%">
+                <mlabel id="corruptcode" html="yes">%text%
+                </mlabel>
+            </step>
+            <step text="%stepconnect%">
+                <mlabel id="attempting" html="yes">%text%
+                </mlabel>
+                <strut height="15"/>
+                <progressbar indeterminate="yes"/>
+                <strut height="15"/>
+                <mlabel id="pleasewait" html="yes">%text%
+                </mlabel>
+            </step>
+            <step text="%stepconnectfail%">
+                <mlabel id="connectfail" html="yes">%text%
+                </mlabel>
+            </step>
+            <step text="%stepsecond%">
+                <mlabel id="second" html="yes">%text%
+                </mlabel>
+                <scrollpanel bordertype="lowered" height="200" id="scrollpanel">
+                </scrollpanel>
+                <panel border="5,5,0,0" axis="x">
+                    <filler expand="horiz"/>
+                    <button text="%text%" eventid="selecttrusted"/>
+                    <strut width="5"/>
+                    <button text="%text%" eventid="selectall"/>
+                    <strut width="5"/>
+                    <button text="%text%" eventid="selectnone"/>
+                </panel>
+                <mlabel id="secondselect" html="yes">%text%
+                </mlabel>
+            </step>
+            <step>
+                <mlabel id="secondsend" html="yes">%text%
+                </mlabel>
+            </step>
+            <step>
+                <mlabel id="connecterror" html="yes">%text%
+                </mlabel>
+            </step>
+            <step text="%stepinvite%">
+                <mlabel id="friendcopy" html="yes">%text%
+                </mlabel>
+                <strut height="15"/>
+                <scrollpanel border="0" bordertype="lowered" minheight="150" height="150">
+                    <textarea id="code" border="5" text="%text%"/>
+                </scrollpanel>
+                <strut height="15"/>
+                <mlabel html="yes" id="newcode">%text%
+                </mlabel>
+            </step>
+            <step text="%stepcheck%">
+                <mlabel id="checkwait" html="yes">%text%
+                </mlabel>
+                <strut height="15"/>
+                <progressbar indeterminate="true"/>
+            </step>
+            <step text="%stepport%">
+                <mlabel html="yes" id="portclosed">%text%
+                </mlabel>
+            </step>
+            <step text="%stepmanual%">
+                <mlabel id="manualok" html="yes">%text%
+                </mlabel>
+            </step>
+        </wizard>
+    </body>
+</xui>

@@ -1,0 +1,20 @@
+
+<xui>
+    <body>
+        <popupmenu id="popup" detached="yes">
+            <menuitem image="gfx/icons/delete.png" text="%text%" eventid="delete"/>
+        </popupmenu>
+        <panel opaque="false" border="0" axis="x" expand="horiz" height="24">
+            <toolbar opaque="false" id="toolbar" expand="horiz"/>
+        </panel>
+        <panel axis="y" border="0">
+            <scrollpanel expand="both" scrollbars="optional" id="scroll" bordertype="lowered">
+                <table id="table"/>
+            </scrollpanel>
+        </panel>
+        <panel axis="x" opaque="false" border="8,6,0,1" expand="horiz">
+            <label id="status" text=" "/>
+            <filler expand="horiz"/>
+        </panel>
+    </body>
+</xui>

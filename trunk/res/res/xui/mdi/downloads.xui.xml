@@ -1,0 +1,35 @@
+<xui>
+    <body>
+        <popupmenu id="popup" detached="yes">
+            <menuitem image="gfx/icons/cleanup.png" text="%text%" eventid="cleanup"/>
+            <menuitem image="gfx/icons/delete.png" text="%text%" eventid="remove"/>
+            <menuitem image="gfx/icons/up.png" text="%text%" eventid="moveup"/>
+            <menuitem image="gfx/icons/down.png" text="%text%" eventid="movedown"/>
+            <menuitem image="gfx/icons/top.png" text="%text%" eventid="movetop"/>
+            <menuitem image="gfx/icons/bottom.png" text="%text%" eventid="movebottom"/>
+            <menuitem image="gfx/icons/loadingsharenode.png" text="%text%" eventid="openfile"/>
+        </popupmenu>
+        <panel opaque="false" border="0" axis="x" expand="horiz" height="24">
+            <toolbar opaque="false" id="toolbar" expand="horiz"/>
+        </panel>
+        <panel axis="y" border="0">
+            <scrollpanel expand="both" scrollbars="optional" id="scroll" bordertype="lowered">
+                <table id="tableDownload"/>
+            </scrollpanel>
+        </panel>
+        <panel id="themed" axis="y" border="0"  expand="horiz">
+            <panel opaque="false" minheight="80" maxheight="80" height="80" axis="x" border="5">
+                <genericcomponent class="org.alliance.ui.JDownloadGrid" id="downloadgrid"/>
+            </panel>
+            <panel opaque="false" maxheight="40" axis="x" border="5">
+                <label text=" " id="downloadingfromtext"/>
+                <filler/>
+                <label text=" " id="uploadingtotext"/>
+            </panel>
+        </panel>
+        <panel axis="x" opaque="false" border="8,6,0,1" expand="horiz">
+            <label id="status" text=" "/>
+            <filler expand="horiz"/>
+        </panel>
+    </body>
+</xui>

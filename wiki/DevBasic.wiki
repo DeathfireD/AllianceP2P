@@ -1,0 +1,21 @@
+#summary Developers Corner - Basic.
+
+= Basic info about source hierarchy  =
+
+*Getting source code of ALL projects (with TortoiseSVN)*
+
+1) Checkout in new directory
+
+http://thayanger.neostrada.pl/dev/svn1.jpg
+
+http://thayanger.neostrada.pl/dev/svn2.jpg
+
+2) Choosing project
+
+Source code include branch, trunk and updater source code:
+
+  * Branch directory contains sources of all public released version. Latest directory contains always most recent version. Branches sources are purely for bug fixing minor bugs.
+
+  * Trunk directory contains all not yet released changes (bug fixes, features, ...).
+
+  * Updater directory for now include only trunk build of updater (external application for updating alliance trough site updates)

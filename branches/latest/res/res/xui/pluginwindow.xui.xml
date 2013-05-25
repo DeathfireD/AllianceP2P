@@ -1,0 +1,36 @@
+
+<xui>
+    <title value="Manage Plugins" image="gfx/icons/alliance.png"/>
+    <body>
+        <panel axis="y" expand = "vert">
+            <panel axis="y" bordertype="etched" bordertitle="Plugins:">
+                <panel axis="x" expand="horiz">
+                    <mlabel html="true">
+                            Add an Alliance plugin
+
+                    </mlabel>
+                </panel>
+                <panel border="0,10,0,5" axis="x" expand="horiz">
+                    <label text="Loaded plugins: "/>
+                    <filler/>
+                </panel>
+                <scrollpanel bordertype="lowered">
+                    <list height="50" id="pluginList"/>
+                </scrollpanel>
+                <panel border="150,5,0,0" axis="x" expand="horiz">
+                    <filler/>
+                    <button text="Add Plugin" eventid="addplugin"/>
+                    <strut width="5"/>
+                    <button text="Remove Plugin" eventid="removeplugin"/>
+                </panel>
+                <strut height="25"/>
+                <panel border="0,5,0,0" axis="x" expand="horiz">
+                    <filler/>
+                    <button text="OK" eventid="ok"/>
+                    <strut width="5"/>
+                    <button text ="Cancel" eventid="cancel"/>
+                </panel>
+            </panel>
+        </panel>
+    </body>
+</xui>

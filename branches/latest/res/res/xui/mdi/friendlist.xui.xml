@@ -1,0 +1,65 @@
+
+<xui>
+    <title value=""/>
+    <body>
+        <popupmenu id="popup" detached="yes">
+            <menuitem image="gfx/icons/chatmessage.png" text="Chat" eventid="chat"/>
+            <menuitem image="gfx/icons/edit_friend.png" text="Edit nickname" eventid="editname"/>
+            <menuitem image="gfx/icons/reconnect.png" text="Reconnect" eventid="reconnect"/>
+            <menuitem image="gfx/icons/connections.png" text="Edit hostname" eventid="edithostname"/>
+            <menuitem image="gfx/icons/removeconnection.png" text="Remove" eventid="removefriend"/>
+            <menuitem image="gfx/icons/editgroup.png" text="Edit group name" eventid="editgroupname"/>
+            <menuitem image="gfx/icons/edittrusted.png" text="Edit trusted friend" eventid="edittrusted"/>
+            <menuitem image="gfx/icons/forwardinvite.png" text="View found via..." eventid="viewvia"/>
+        </popupmenu>
+        <panel opaque="false" border="0" axis="x" expand="horiz" height="24">
+            <strut width="7"/>
+            <toolbar opaque="false" id="toolbar" expand="horiz"/>
+        </panel>
+
+        <scrollpanel expand="both" scrollbars="optional" id="scrollpanel" bordertype="lowered">
+        </scrollpanel>
+
+        <panel axis="y" border="5"  expand="horiz">
+            <panel axis="x" expand="horiz">
+                <textfield id="searchfield"/>
+                <strut width="5"/>
+                <button eventid="searchfriend" text="Search friend"/>
+                <filler/>
+            </panel>
+            <panel axis="x" expand="horiz">
+                <panel axis="y" expand="vert" border="0">
+                    <panel axis="x" border="5">
+                        <image src="gfx/icons/friend_lame_big.png" id="myicon"/>
+                        <panel axis="y" border="0">
+                            <filler/>
+                            <panel axis="x" border="10,7,0,0">
+                                <label text="Maciek" id="myname"/>
+                                <label text=" - "/>
+                                <label text="(Member)" id="mylevel"/>
+                            </panel>
+                            <filler/>
+                        </panel>
+                    </panel>
+                </panel>
+                <filler/>
+            </panel>
+            <panel axis="y" border="0">
+                <filler/>
+                <panel border="0" axis="x" expand="horiz">
+                    <strut width="5"/>
+                    <label text="Invite 2 friends to become " id="nextLevelText"/>
+                    <image border="0" src="gfx/icons/friend.png" id="nextLevelIcon"/>
+                    <label text=")" id="levelEnding"/>
+                    <filler/>
+                </panel>
+            </panel>
+        </panel>
+
+        <panel axis="x" opaque="false" border="8,6,0,1" expand="horiz">
+            <label id="statusleft" text=" "/>
+            <filler expand="horiz"/>
+            <label id="statusright" text=" "/>
+        </panel>
+    </body>
+</xui>

@@ -1,0 +1,15 @@
+<xui>
+    <body>
+        <panel axis="y" expand="vert">
+            <scrollpanel width="300" height="450" bordertype="lowered">
+                <list id="fofList"/>
+            </scrollpanel>
+            <strut height="5"/>
+            <panel border="0,5,0,0" axis="x" expand="horiz">
+                <filler/>
+                <button text="%text%" eventid="ok"/>
+                <strut width="5"/>
+            </panel>
+        </panel>
+    </body>
+</xui>

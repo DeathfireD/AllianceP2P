@@ -1,0 +1,139 @@
+
+<xui>
+    <body>
+        <panel axis="y" id="networktab">
+            <scrollpanel border="0" scrollbars="optional">
+                <panel border="0" axis="y">
+                    <panel id="netsettings" axis="y" bordertype="etched" bordertitle="%text%">
+                        <form expand="horiz" border="5">
+                            <row>
+                                <cell>
+                                    <panel border="0" axis="y">
+                                        <filler/>
+                                        <label id="localip" text="%text%"/>
+                                    </panel>
+                                </cell>
+                                <cell>
+                                    <panel border="0" axis="x">
+                                        <filler axis="x"/>
+                                        <textfield width="250" minwidth="250" maxwidth="250" id="localfield"/>
+                                    </panel>
+                                </cell>
+                            </row>
+                            <row>
+                                <cell>
+                                    <panel border="0" axis="y">
+                                        <filler/>
+                                        <label id="externalip" text="%text%"/>
+                                    </panel>
+                                </cell>
+                                <cell>
+                                    <panel border="0" axis="x">
+                                        <filler axis="x"/>
+                                        <textfield width="250" minwidth="250" maxwidth="250" id="externalfield"/>
+                                    </panel>
+                                </cell>
+                            </row>
+                        </form>
+                        <panel bordertype="etched" border="0" axis="y">
+                            <panel border="0" axis="x">
+                                <checkbox id="server.lanmode" tooltip="%text%" text="%text%"/>
+                                <filler axis="x"/>
+                            </panel>
+                            <panel border="0" axis="x">
+                                <checkbox id="server.staticip" tooltip="%text%" text="%text%"/>
+                                <filler axis="x"/>
+                            </panel>
+                            <panel border="0" axis="x">
+                                <checkbox id="server.ipv6" text="%text%"/>
+                                <filler axis="x"/>
+                            </panel>
+                        </panel>
+                        <strut height="5"/>
+                        <form>
+                            <row>
+                                <cell>
+                                    <panel border="0" axis="y">
+                                        <filler/>
+                                        <label id="port" tooltip="%text%" text="%text%"/>
+                                    </panel>
+                                </cell>
+                                <cell>
+                                    <panel border="0" axis="x">
+                                        <filler axis="x"/>
+                                        <textfield width="75" minwidth="75" maxwidth="75" id="server.port"/>
+                                    </panel>
+                                </cell>
+                            </row>
+                        </form>
+                        <panel bordertype="etched" border="0" axis="y">
+                            <panel border="0" axis="x">
+                                <checkbox id="internal.skipportcheck" tooltip="%text%" text="%text%"/>
+                                <filler axis="x"/>
+                            </panel>
+                            <panel border="0" expand="horiz" axis="x">
+                                <strut width="5"/>
+                                <mlabel html="true" id="portforward">%text%
+                                </mlabel>
+                                <strut width="5"/>
+                            </panel>
+                        </panel>
+                    </panel>
+                    <panel id="advnet" axis="y" bordertype="etched" bordertitle="%text%">
+                        <form expand="horiz" border="5">
+                            <row>
+                                <cell>
+                                    <panel border="0" axis="y">
+                                        <filler/>
+                                        <label id="dnsname" text="%text%"/>
+                                    </panel>
+                                </cell>
+                                <cell>
+                                    <panel border="0" axis="x">
+                                        <filler axis="x"/>
+                                        <textfield width="250" minwidth="250" maxwidth="250" id="server.dnsname"/>
+                                    </panel>
+                                </cell>
+                            </row>
+                        </form>
+                        <panel bordertype="etched" border="0" axis="y">
+                            <panel border="0" axis="x">
+                                <checkbox id="server.dnsmode" tooltip="%text%" text="%text%"/>
+                                <filler axis="x"/>
+                            </panel>
+                            <panel border="0" axis="x">
+                                <checkbox id="internal.rdnsname" text="%text%" tooltip="%text"/>
+                                <filler axis="x"/>
+                            </panel>
+                        </panel>
+                    </panel>
+                    <panel id="bind" axis="y" bordertype="etched" bordertitle="%text%">
+                        <panel border="0" axis="x">
+                            <checkbox id="server.bindtoall" tooltip="%text%" text="%text%"/>
+                            <filler axis="x"/>
+                        </panel>
+                        <panel id="single" axis="y" bordertype="etched" bordertitle="%text%">
+                            <form expand="horiz" border="5">
+                                <row>
+                                    <cell>
+                                        <panel border="0" axis="y">
+                                            <filler/>
+                                            <label id="interface" text="%text%"/>
+                                        </panel>
+                                    </cell>
+                                    <cell>
+                                        <panel border="0" axis="x">
+                                            <filler axis="x"/>
+                                            <dropdown id="server.bindnic" width="250" minwidth="250" maxwidth="250"/>
+                                        </panel>
+                                    </cell>
+                                </row>
+                            </form>
+                        </panel>
+                    </panel>
+                </panel>
+            </scrollpanel>
+        </panel>
+    </body>
+</xui>
+

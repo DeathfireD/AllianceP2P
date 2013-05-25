@@ -1,0 +1,18 @@
+#summary User Guide - Learn how to make and use .Alliance files.
+
+= Introduction =
+
+.Alliance files are similar to .torrent and .xdcc files. However the major difference is that Alliance files do not contain any connection info or file data. The only thing they contain is a non-unique user ID and a file hash. When adding an .alliance file to your client, your client attempts to connect to a friend with the ID that's in the .alliance file. If you don't have a friend with that ID then it wont connect to anyone. Once it finds a friend with that ID it will then search their shared database for the hash. If it finds a match it will then start to download the file.
+
+
+= How to make an .Alliance file =
+Similar to how you'd send a link to the chat room.
+  * First browse your shared database and right mouse click on a file/folder.
+  * Then select the "Create link on hdd".
+  * Once you do this Alliance will open the save dialog asking you to save the file somewhere.
+  * Once you choose a location select "open"...I know it should be save...we'll fix it soon.
+  * Now you can share or send the .Alliance file to your friends.
+
+= How to download using a .Alliance file = 
+  * Once you've obtained an .Alliance file simply go to your downloads tab in Alliance and select the "open link from hdd" button. It's the little orange arrow facing up.
+  * You will then have to select the Alliance file. Once you do that Alliance will attempt to connect to one of your friends with the ID in the .Alliance file. If it manages to connect it will then start downloading the file.

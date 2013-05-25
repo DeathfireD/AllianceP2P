@@ -1,0 +1,18 @@
+<xui>
+    <body>
+        <panel opaque="false" border="0" axis="x" expand="horiz" height="24">
+            <toolbar opaque="false" id="toolbar" expand="horiz"/>
+        </panel>
+        <panel axis="y" border="0">
+            <scrollpanel scrollbars="optional" bordertype="lowered">
+                <panel axis="x" border="5,3,5,5">
+                    <mlabel html="yes" id="label"/>
+                </panel>
+            </scrollpanel>
+        </panel>
+       <panel axis="x" opaque="false" border="8,6,0,1" expand="horiz">
+            <label id="status" text=" "/>
+            <filler expand="horiz"/>
+        </panel>
+    </body>
+</xui>

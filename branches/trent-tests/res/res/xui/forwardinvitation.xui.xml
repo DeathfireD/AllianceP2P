@@ -1,0 +1,21 @@
+<xui>
+    <title value="Allow friends to connect?" image="gfx/icons/alliance.png"/>
+    <body>
+        <panel border="10" axis="y" height="160" width="450">
+            <mlabel html="yes" border="0" id="label">
+                Kurt wants to connect to Karin. These two users are not connected right now. You are the connection between them.[p]Do you want to allow Kurt to connect to Karin?
+            </mlabel>
+            <panel axis="x" border="0" expand="horiz">
+                <checkbox id="alwaysAllowInvite" text="Always allow my friends to connect to each other"/>
+            </panel>
+            <strut height="15"/>
+            <panel axis="x" border="0" expand="horiz">
+                <filler axis="x"/>
+                <button text="Yes" eventid="yes" width="80"/>
+                <strut width="5"/>
+                <button text="No" eventid="no" width="80"/>
+                <filler axis="x"/>
+            </panel>
+        </panel>
+    </body>
+</xui>

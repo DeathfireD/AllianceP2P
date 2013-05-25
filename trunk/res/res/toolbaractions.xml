@@ -1,0 +1,306 @@
+
+<toolbaractions>
+    <group id="friendlist">
+        <action
+            id="addfriendwizard"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/addconnection_small.png"/>
+        <action separator="yes"/>
+        <action
+            id="chat"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/chatmessage.png"/>
+        <action
+            id="viewshare"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/folder_view.png"/>
+        <action
+            id="editname"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/edit_friend.png"/>
+        <action separator="yes"/>
+        <action
+            id="revert"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/refresh.png"/>
+        <action
+            id="reconnect"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/reconnect.png"/>
+        <action separator="yes"/>
+        <action
+            id="edithostname"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/connections.png"/>
+        <action
+            id="removefriend"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/removeconnection.png"/>
+        <action
+            id="editgroupname"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/editgroup.png"/>
+        <action
+            id="edittrusted"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/edittrusted.png"/>
+        <action
+            id="viewvia"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/forwardinvite.png"/>
+        <action filler="true"/>
+    </group>
+    <group id="friends">
+        <action
+            id="revert"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/refresh.png"/>
+        <action filler="true"/>
+        <action
+            id="close"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/close.png"/>
+    </group>
+    <group id="search">
+        <action
+            id="download"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/download.png"/>
+        <action filler="true"/>
+    </group>
+    <group id="chatmessage">
+        <action filler="true"/>
+        <action
+            id="close"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/close.png"/>
+    </group>
+    <group id="publicchat">
+        <action
+            id="cleanscreen"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/cleanup.png"/>
+        <action
+            id="cleanup"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/cleanall.png"/>
+        <action filler="true"/>
+    </group>
+    <group id="historychat">
+        <action
+            id="cleanup"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/cleanall.png"/>
+        <action filler="true"/>
+        <action
+            id="close"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/close.png"/>
+    </group>
+    <group id="viewshare">
+        <action
+            id="revert"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/refresh.png"/>
+        <action separator="yes"/>
+        <action
+            id="download"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/download.png"/>
+        <action
+            id="chat"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/chatmessage.png"/>
+        <action filler="true"/>
+        <action
+            id="close"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/close.png"/>
+    </group>
+    <group id="viewmyshare">
+        <action
+            id="revert"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/refresh.png"/>
+        <action separator="yes"/>
+        <action
+            id="sendtochat"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/sendtochat.png"/>
+        <action
+            id="linktohdd"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/download.png"/>
+        <action separator="yes"/>
+        <action
+            id="openfile"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/execute.png"/>
+        <action filler="true"/>
+        <action
+            id="close"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/close.png"/>
+    </group>
+    <group id="downloads">
+        <action
+            id="moveup"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/up.png"/>
+        <action
+            id="movedown"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/down.png"/>
+        <action
+            id="movetop"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/top.png"/>
+        <action
+            id="movebottom"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/bottom.png"/>
+        <action separator="yes"/>
+        <action
+            id="cleanup"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/cleanup.png"/>
+        <action
+            id="remove"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/delete.png"/>
+        <action separator="yes"/>
+        <action
+            id="openfile"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/execute.png"/>
+        <action
+            id="opendownloaddir"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/folder_view.png"/>
+        <action
+            id="openhddlink"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/uploads.png"/>
+        <action filler="true"/>
+    </group>
+    <group id="uploads">
+        <action
+            id="cleanup"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/cleanup.png"/>
+        <action filler="true"/>
+        <action
+            id="close"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/close.png"/>
+    </group>
+    <group id="duplicates">
+        <action
+            id="revert"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/refresh.png"/>
+        <action separator="yes"/>
+        <action
+            id="delete"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/delete.png"/>
+        <action filler="true"/>
+        <action
+            id="close"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/close.png"/>
+    </group>
+    <group id="trace">
+        <action filler="true"/>
+        <action
+            id="close"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/close.png"/>
+    </group>
+    <group id="welcome">
+        <action filler="true"/>
+        <action
+            id="close"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/close.png"/>
+    </group>
+    <group id="connections">
+        <action filler="true"/>
+        <action
+            id="close"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/close.png"/>
+    </group>
+    <group id="console">
+        <action filler="true"/>
+        <action
+            id="close"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/close.png"/>
+    </group>
+    <group id="invitations">
+        <action
+            id="refresh"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/refresh.png"/>
+        <action separator="yes"/>
+        <action
+            id="delete"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/delete.png"/>
+        <action filler="true"/>
+        <action
+            id="close"
+            name="%NAME%"
+            description="%DES%"
+            toolbarimage="gfx/icons/close.png"/>
+    </group>
+</toolbaractions>
