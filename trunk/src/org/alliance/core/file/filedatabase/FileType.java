@@ -18,8 +18,8 @@ public boolean matches(String s) {
     return true;
 }
 }),
-    AUDIO("audio", 1, new ExtensionFileType(new String[]{"mp3", "mp4", "wav", "acc", "ogg", "asf", "wma", "aiff"})),
-    ARCHIVE("archive", 4, new ExtensionFileType(new String[]{"rar", "zip", "tar", "gz", "7z"}) {
+    AUDIO("audio", 1, new ExtensionFileType(new String[]{"mp3", "wav", "flac", "acc", "ogg", "asf", "wma", "aif", "aiff", "mid", "midi", "ra"})),
+    ARCHIVE("archive", 4, new ExtensionFileType(new String[]{"rar", "zip", "zipx", "tar", "gz", "7z", "tar", "tgz", "sit", "sitx"}) {
 
 @Override
 public boolean matches(String s) {
@@ -32,11 +32,11 @@ public boolean matches(String s) {
     return true;
 }
 }),
-    CDDVD("cddvd", 3, new ExtensionFileType(new String[]{"iso", "img", "bin", "cue", "mdf", "mds"})),
-    DOCUMENT("document", 6, new ExtensionFileType(new String[]{"doc", "txt", "nfo"})),
-    IMAGE("image", 5, new ExtensionFileType(new String[]{"jpg", "jpeg", "gif", "png", "bmp", "tiff"})),
-    PRESENTATION("presentation", 7, new ExtensionFileType(new String[]{"key", "pps", "ppt"})),
-    VIDEO("video", 2, new ExtensionFileType(new String[]{"avi", "mkv", "mpg", "mpeg", "mov", "asf", "wmv", "divx", "xvid", "rmvb", "rm", "ogm"}));
+    CDDVD("cddvd", 3, new ExtensionFileType(new String[]{"iso", "img", "bin", "cue", "mdf", "mds", "dmg", "vcd"})),
+    DOCUMENT("document", 6, new ExtensionFileType(new String[]{"txt", "nfo", "doc", "docx", "rtf", "wpd", "wps", "pdf", "xlr", "xls", "xlsx", "mobi", "lit"})),
+    IMAGE("image", 5, new ExtensionFileType(new String[]{"jpg", "jpeg", "gif", "png", "bmp", "tif", "tiff", "psd", "svg", "ai", "eps", "ps"})),
+    PRESENTATION("presentation", 7, new ExtensionFileType(new String[]{"ppt", "pptx", "pps", "key"})),
+    VIDEO("video", 2, new ExtensionFileType(new String[]{"avi", "mkv", "mpg", "mpeg", "mov", "mp4", "asf", "wmv", "divx", "xvid", "rmvb", "rm", "ogm", "flv", "vob"}));
     private final String description;
     private final byte id;
     private final FileTypeIdentifier fileTypeIdentifier;
