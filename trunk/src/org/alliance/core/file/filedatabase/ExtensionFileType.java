@@ -21,8 +21,9 @@ public class ExtensionFileType extends FileTypeIdentifier {
 
     @Override
     public boolean matches(String s) {
+        String sl = s.toLowerCase();
         for (String e : extensions) {
-            if (s.toLowerCase().endsWith(e)) {
+            if (sl.endsWith("." + e)) {
                 return true;
             }
         }
