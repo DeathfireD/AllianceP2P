@@ -2,11 +2,9 @@ Alliance takes the best from BitTorrent, Direct Connect and Waste and creates a 
 
 This site is for the Beta branch and latest releases.
 
-If you plan to contribute please join our forum: http://ordway.ath.cx/alliance/forum/index.php
-
 For older versions of Alliance you can still get them on the SourceForge site visit: http://sourceforge.net/projects/alliancep2p/
 
-We accept donations on bitcoin: 12SJJoTGNGThxRSEiS8xUCHcHyF8vMd7at
+We accept donations on bitcoin: 1KCdzcapeXR2vg5epWQkXQGr38T6bwButV
 
 Homepage: http://www.alliancep2p.com/
 
